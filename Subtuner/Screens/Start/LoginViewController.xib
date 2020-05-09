@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Subtuner" customModuleProvider="target">
             <connections>
+                <outlet property="bottomConstraint" destination="Cr4-Fy-FjX" id="K3n-C6-2JX"/>
+                <outlet property="containerHeightConstraint" destination="XgU-2m-cX4" id="0fg-7w-ssm"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Tj3-qZ-6Qu"/>
             </connections>
         </placeholder>
@@ -18,13 +20,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohb-Cq-df7">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="896"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="li0-44-Laf" userLabel="Container View">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="frE-au-ifK">
-                                    <rect key="frame" x="40" y="50" width="240" height="305"/>
+                                    <rect key="frame" x="40" y="97.5" width="240" height="305"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtuner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYo-MM-H6t">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
@@ -67,8 +69,10 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstItem="frE-au-ifK" firstAttribute="top" secondItem="li0-44-Laf" secondAttribute="top" constant="50" id="EIy-HN-Nwe"/>
-                                <constraint firstAttribute="height" constant="500" id="RWl-fw-Lhs"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="frE-au-ifK" secondAttribute="bottom" id="7oe-Fh-VoC"/>
+                                <constraint firstItem="frE-au-ifK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="li0-44-Laf" secondAttribute="top" id="EIy-HN-Nwe"/>
+                                <constraint firstItem="frE-au-ifK" firstAttribute="centerY" secondItem="li0-44-Laf" secondAttribute="centerY" id="SIB-2a-YKb"/>
+                                <constraint firstAttribute="height" constant="500" id="XgU-2m-cX4"/>
                                 <constraint firstItem="frE-au-ifK" firstAttribute="centerX" secondItem="li0-44-Laf" secondAttribute="centerX" id="xQI-Ar-bgP"/>
                             </constraints>
                         </view>
@@ -85,9 +89,10 @@
                 </scrollView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="Ohb-Cq-df7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AC6-mB-leO"/>
-                <constraint firstAttribute="bottom" secondItem="Ohb-Cq-df7" secondAttribute="bottom" constant="-328" id="Cr4-Fy-FjX"/>
+                <constraint firstAttribute="bottom" secondItem="Ohb-Cq-df7" secondAttribute="bottom" id="Cr4-Fy-FjX"/>
                 <constraint firstItem="Ohb-Cq-df7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="a4T-ZT-TIB"/>
                 <constraint firstItem="Ohb-Cq-df7" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="w8W-qN-0Gk"/>
             </constraints>

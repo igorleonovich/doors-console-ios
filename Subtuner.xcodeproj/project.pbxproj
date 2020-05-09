@@ -163,10 +163,10 @@
 			isa = PBXGroup;
 			children = (
 				C38FB46624612F43000C187C /* LoadingViewController.swift */,
-				C3BBC07824671098001158C8 /* LoginViewController.swift */,
-				C3BBC07A24672E4C001158C8 /* SignUpViewController.swift */,
 				C3BBC09124674E9E001158C8 /* LoadingViewController.xib */,
+				C3BBC07824671098001158C8 /* LoginViewController.swift */,
 				C3BBC09324674FA9001158C8 /* LoginViewController.xib */,
+				C3BBC07A24672E4C001158C8 /* SignUpViewController.swift */,
 				C3BBC095246751B8001158C8 /* SignUpViewController.xib */,
 			);
 			path = Start;
@@ -208,8 +208,8 @@
 		C3BBC08B246746E6001158C8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				C3BBC09724675223001158C8 /* Console */,
 				C3BBC07E24672E8B001158C8 /* Start */,
+				C3BBC09724675223001158C8 /* Console */,
 			);
 			path = Screens;
 			sourceTree = "<group>";

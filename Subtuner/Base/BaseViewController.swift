@@ -11,6 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint?
+    @IBOutlet weak var containerHeightConstraint: NSLayoutConstraint?
     
     var considerBottomSafeArea = false
     var initialBottomIndent: CGFloat = 0.0
@@ -31,6 +32,11 @@ class BaseViewController: UIViewController {
         setupKeyboard()
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        containerHeightConstraint?.constant = view.frame.height
+    }
+    
     private func modalSetup() {
         if modalPresentationStyle == .pageSheet {
             modalPresentationStyle = .overCurrentContext
@@ -39,6 +45,11 @@ class BaseViewController: UIViewController {
         if #available(iOS 13.0, *) {
             isModalInPresentation = true
         }
+    }
+    
+    func setupHidingKeyboardTap() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard(_:)))
+        view.addGestureRecognizer(gesture)
     }
     
     private func setupKeyboard() {
@@ -69,5 +80,9 @@ class BaseViewController: UIViewController {
         guard let bottomConstraint = bottomConstraint else { return }
         bottomConstraint.constant = initialBottomIndent
         view.setNeedsLayout()
+    }
+    
+    @objc func hideKeyboard(_ sender: AnyObject) {
+        view.endEditing(true)
     }
 }
