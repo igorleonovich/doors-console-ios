@@ -26,8 +26,8 @@
 		C3BBC0902467479C001158C8 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC08F2467479C001158C8 /* Core.swift */; };
 		C3BBC09224674E9E001158C8 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBC09124674E9E001158C8 /* LoadingViewController.xib */; };
 		C3BBC09424674FA9001158C8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBC09324674FA9001158C8 /* LoginViewController.xib */; };
-		C3BBC096246751B8001158C8 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBC095246751B8001158C8 /* SignUpViewController.xib */; };
 		C3BBC09B24675256001158C8 /* ConsoleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBC09A24675256001158C8 /* ConsoleViewController.xib */; };
+		C3BBC09F246766F6001158C8 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBC09E246766F6001158C8 /* SignUpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +73,8 @@
 		C3BBC08F2467479C001158C8 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		C3BBC09124674E9E001158C8 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
 		C3BBC09324674FA9001158C8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		C3BBC095246751B8001158C8 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		C3BBC09A24675256001158C8 /* ConsoleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsoleViewController.xib; sourceTree = "<group>"; };
+		C3BBC09E246766F6001158C8 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +167,7 @@
 				C3BBC07824671098001158C8 /* LoginViewController.swift */,
 				C3BBC09324674FA9001158C8 /* LoginViewController.xib */,
 				C3BBC07A24672E4C001158C8 /* SignUpViewController.swift */,
-				C3BBC095246751B8001158C8 /* SignUpViewController.xib */,
+				C3BBC09E246766F6001158C8 /* SignUpViewController.xib */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -340,7 +340,7 @@
 				C38FB46F24612F46000C187C /* LaunchScreen.storyboard in Resources */,
 				C38FB46C24612F46000C187C /* Assets.xcassets in Resources */,
 				C38FB46A24612F43000C187C /* Main.storyboard in Resources */,
-				C3BBC096246751B8001158C8 /* SignUpViewController.xib in Resources */,
+				C3BBC09F246766F6001158C8 /* SignUpViewController.xib in Resources */,
 				C3BBC09224674E9E001158C8 /* LoadingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

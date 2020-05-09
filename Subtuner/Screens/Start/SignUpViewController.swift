@@ -10,4 +10,21 @@ import UIKit
 
 class SignUpViewController: BaseViewController {
     
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+    
+    }
 }

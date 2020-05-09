@@ -28,4 +28,9 @@ class LoginViewController: BaseViewController {
     @IBAction func loginButtonTapped(_ sender: Any) {
     
     }
+    
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+        let vc = SignUpViewController(isModal: false)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
