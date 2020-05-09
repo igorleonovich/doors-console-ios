@@ -9,12 +9,25 @@
 /* Begin PBXBuildFile section */
 		C38FB46324612F43000C187C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FB46224612F43000C187C /* AppDelegate.swift */; };
 		C38FB46524612F43000C187C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FB46424612F43000C187C /* SceneDelegate.swift */; };
-		C38FB46724612F43000C187C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FB46624612F43000C187C /* ViewController.swift */; };
+		C38FB46724612F43000C187C /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FB46624612F43000C187C /* LoadingViewController.swift */; };
 		C38FB46A24612F43000C187C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38FB46824612F43000C187C /* Main.storyboard */; };
 		C38FB46C24612F46000C187C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38FB46B24612F46000C187C /* Assets.xcassets */; };
 		C38FB46F24612F46000C187C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38FB46D24612F46000C187C /* LaunchScreen.storyboard */; };
 		C38FB47A24612F47000C187C /* SubtunerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FB47924612F47000C187C /* SubtunerTests.swift */; };
 		C38FB48524612F47000C187C /* SubtunerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FB48424612F47000C187C /* SubtunerUITests.swift */; };
+		C3BBC07924671098001158C8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC07824671098001158C8 /* LoginViewController.swift */; };
+		C3BBC07B24672E4C001158C8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC07A24672E4C001158C8 /* SignUpViewController.swift */; };
+		C3BBC07D24672E72001158C8 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC07C24672E72001158C8 /* ConsoleViewController.swift */; };
+		C3BBC08124673395001158C8 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC08024673395001158C8 /* UIViewController+Extensions.swift */; };
+		C3BBC0842467342E001158C8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0832467342E001158C8 /* BaseViewController.swift */; };
+		C3BBC08724674306001158C8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC08624674306001158C8 /* Device.swift */; };
+		C3BBC08A246746BE001158C8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC089246746BE001158C8 /* Settings.swift */; };
+		C3BBC08D2467472F001158C8 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC08C2467472F001158C8 /* RootViewController.swift */; };
+		C3BBC0902467479C001158C8 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC08F2467479C001158C8 /* Core.swift */; };
+		C3BBC09224674E9E001158C8 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBC09124674E9E001158C8 /* LoadingViewController.xib */; };
+		C3BBC09424674FA9001158C8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBC09324674FA9001158C8 /* LoginViewController.xib */; };
+		C3BBC096246751B8001158C8 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBC095246751B8001158C8 /* SignUpViewController.xib */; };
+		C3BBC09B24675256001158C8 /* ConsoleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBC09A24675256001158C8 /* ConsoleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +51,7 @@
 		C38FB45F24612F43000C187C /* Subtuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subtuner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38FB46224612F43000C187C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C38FB46424612F43000C187C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C38FB46624612F43000C187C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C38FB46624612F43000C187C /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		C38FB46924612F43000C187C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C38FB46B24612F46000C187C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C38FB46E24612F46000C187C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +62,19 @@
 		C38FB48024612F47000C187C /* SubtunerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubtunerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38FB48424612F47000C187C /* SubtunerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtunerUITests.swift; sourceTree = "<group>"; };
 		C38FB48624612F47000C187C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3BBC07824671098001158C8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C3BBC07A24672E4C001158C8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C3BBC07C24672E72001158C8 /* ConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
+		C3BBC08024673395001158C8 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		C3BBC0832467342E001158C8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C3BBC08624674306001158C8 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		C3BBC089246746BE001158C8 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		C3BBC08C2467472F001158C8 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		C3BBC08F2467479C001158C8 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		C3BBC09124674E9E001158C8 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		C3BBC09324674FA9001158C8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		C3BBC095246751B8001158C8 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		C3BBC09A24675256001158C8 /* ConsoleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsoleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +125,14 @@
 		C38FB46124612F43000C187C /* Subtuner */ = {
 			isa = PBXGroup;
 			children = (
+				C3BBC0822467341E001158C8 /* Base */,
+				C3BBC08B246746E6001158C8 /* Screens */,
+				C3BBC08E2467478C001158C8 /* Core */,
+				C3BBC0882467434F001158C8 /* Settings */,
+				C3BBC085246742FC001158C8 /* Utils */,
+				C3BBC07F24673387001158C8 /* Extensions */,
 				C38FB46224612F43000C187C /* AppDelegate.swift */,
 				C38FB46424612F43000C187C /* SceneDelegate.swift */,
-				C38FB46624612F43000C187C /* ViewController.swift */,
 				C38FB46824612F43000C187C /* Main.storyboard */,
 				C38FB46B24612F46000C187C /* Assets.xcassets */,
 				C38FB46D24612F46000C187C /* LaunchScreen.storyboard */,
@@ -126,6 +157,78 @@
 				C38FB48624612F47000C187C /* Info.plist */,
 			);
 			path = SubtunerUITests;
+			sourceTree = "<group>";
+		};
+		C3BBC07E24672E8B001158C8 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				C38FB46624612F43000C187C /* LoadingViewController.swift */,
+				C3BBC07824671098001158C8 /* LoginViewController.swift */,
+				C3BBC07A24672E4C001158C8 /* SignUpViewController.swift */,
+				C3BBC09124674E9E001158C8 /* LoadingViewController.xib */,
+				C3BBC09324674FA9001158C8 /* LoginViewController.xib */,
+				C3BBC095246751B8001158C8 /* SignUpViewController.xib */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		C3BBC07F24673387001158C8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C3BBC08024673395001158C8 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C3BBC0822467341E001158C8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C3BBC0832467342E001158C8 /* BaseViewController.swift */,
+				C3BBC08C2467472F001158C8 /* RootViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C3BBC085246742FC001158C8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C3BBC08624674306001158C8 /* Device.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C3BBC0882467434F001158C8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C3BBC089246746BE001158C8 /* Settings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C3BBC08B246746E6001158C8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C3BBC09724675223001158C8 /* Console */,
+				C3BBC07E24672E8B001158C8 /* Start */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C3BBC08E2467478C001158C8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C3BBC08F2467479C001158C8 /* Core.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C3BBC09724675223001158C8 /* Console */ = {
+			isa = PBXGroup;
+			children = (
+				C3BBC07C24672E72001158C8 /* ConsoleViewController.swift */,
+				C3BBC09A24675256001158C8 /* ConsoleViewController.xib */,
+			);
+			path = Console;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +335,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3BBC09B24675256001158C8 /* ConsoleViewController.xib in Resources */,
+				C3BBC09424674FA9001158C8 /* LoginViewController.xib in Resources */,
 				C38FB46F24612F46000C187C /* LaunchScreen.storyboard in Resources */,
 				C38FB46C24612F46000C187C /* Assets.xcassets in Resources */,
 				C38FB46A24612F43000C187C /* Main.storyboard in Resources */,
+				C3BBC096246751B8001158C8 /* SignUpViewController.xib in Resources */,
+				C3BBC09224674E9E001158C8 /* LoadingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +366,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C38FB46724612F43000C187C /* ViewController.swift in Sources */,
+				C3BBC07D24672E72001158C8 /* ConsoleViewController.swift in Sources */,
+				C3BBC07924671098001158C8 /* LoginViewController.swift in Sources */,
+				C38FB46724612F43000C187C /* LoadingViewController.swift in Sources */,
+				C3BBC08D2467472F001158C8 /* RootViewController.swift in Sources */,
+				C3BBC08724674306001158C8 /* Device.swift in Sources */,
+				C3BBC08A246746BE001158C8 /* Settings.swift in Sources */,
+				C3BBC0902467479C001158C8 /* Core.swift in Sources */,
+				C3BBC08124673395001158C8 /* UIViewController+Extensions.swift in Sources */,
 				C38FB46324612F43000C187C /* AppDelegate.swift in Sources */,
+				C3BBC0842467342E001158C8 /* BaseViewController.swift in Sources */,
 				C38FB46524612F43000C187C /* SceneDelegate.swift in Sources */,
+				C3BBC07B24672E4C001158C8 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +560,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.subtuner.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -462,7 +578,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.subtuner.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
