@@ -28,6 +28,8 @@
 		C3BBC09424674FA9001158C8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBC09324674FA9001158C8 /* LoginViewController.xib */; };
 		C3BBC09B24675256001158C8 /* ConsoleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBC09A24675256001158C8 /* ConsoleViewController.xib */; };
 		C3BBC09F246766F6001158C8 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBC09E246766F6001158C8 /* SignUpViewController.xib */; };
+		C3BBC0A124676A7D001158C8 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0A024676A7D001158C8 /* ForgotPasswordViewController.swift */; };
+		C3BBC0A324676AC0001158C8 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBC0A224676AC0001158C8 /* ForgotPasswordViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		C3BBC09324674FA9001158C8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		C3BBC09A24675256001158C8 /* ConsoleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsoleViewController.xib; sourceTree = "<group>"; };
 		C3BBC09E246766F6001158C8 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		C3BBC0A024676A7D001158C8 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		C3BBC0A224676AC0001158C8 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 				C3BBC09324674FA9001158C8 /* LoginViewController.xib */,
 				C3BBC07A24672E4C001158C8 /* SignUpViewController.swift */,
 				C3BBC09E246766F6001158C8 /* SignUpViewController.xib */,
+				C3BBC0A024676A7D001158C8 /* ForgotPasswordViewController.swift */,
+				C3BBC0A224676AC0001158C8 /* ForgotPasswordViewController.xib */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3BBC0A324676AC0001158C8 /* ForgotPasswordViewController.xib in Resources */,
 				C3BBC09B24675256001158C8 /* ConsoleViewController.xib in Resources */,
 				C3BBC09424674FA9001158C8 /* LoginViewController.xib in Resources */,
 				C38FB46F24612F46000C187C /* LaunchScreen.storyboard in Resources */,
@@ -376,6 +383,7 @@
 				C3BBC08124673395001158C8 /* UIViewController+Extensions.swift in Sources */,
 				C38FB46324612F43000C187C /* AppDelegate.swift in Sources */,
 				C3BBC0842467342E001158C8 /* BaseViewController.swift in Sources */,
+				C3BBC0A124676A7D001158C8 /* ForgotPasswordViewController.swift in Sources */,
 				C38FB46524612F43000C187C /* SceneDelegate.swift in Sources */,
 				C3BBC07B24672E4C001158C8 /* SignUpViewController.swift in Sources */,
 			);

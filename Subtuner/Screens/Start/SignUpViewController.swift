@@ -14,6 +14,11 @@ class SignUpViewController: BaseViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupHidingKeyboardTap()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
