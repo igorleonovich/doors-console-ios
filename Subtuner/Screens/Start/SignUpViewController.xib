@@ -10,7 +10,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="Subtuner" customModuleProvider="target">
             <connections>
                 <outlet property="bottomConstraint" destination="Cr4-Fy-FjX" id="K3n-C6-2JX"/>
-                <outlet property="confirmPasswordTextField" destination="bT4-Mr-eVP" id="hCQ-Re-afo"/>
                 <outlet property="containerHeightConstraint" destination="XgU-2m-cX4" id="0fg-7w-ssm"/>
                 <outlet property="emailTextField" destination="8kd-ni-9uw" id="Mtr-LR-1EV"/>
                 <outlet property="passwordTextField" destination="RaV-bT-aPE" id="FlA-vk-hq3"/>
