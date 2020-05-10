@@ -14,6 +14,7 @@
                 <outlet property="containerHeightConstraint" destination="XgU-2m-cX4" id="0fg-7w-ssm"/>
                 <outlet property="emailTextField" destination="8kd-ni-9uw" id="Mtr-LR-1EV"/>
                 <outlet property="passwordTextField" destination="RaV-bT-aPE" id="FlA-vk-hq3"/>
+                <outlet property="usernameTextField" destination="bT4-Mr-eVP" id="Dru-jp-EVy"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Tj3-qZ-6Qu"/>
             </connections>
         </placeholder>
@@ -37,17 +38,17 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8kd-ni-9uw">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bT4-Mr-eVP">
                                             <rect key="frame" x="0.0" y="75" width="240" height="34"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="16"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RaV-bT-aPE">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8kd-ni-9uw">
                                             <rect key="frame" x="0.0" y="141" width="240" height="34"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="16"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bT4-Mr-eVP">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RaV-bT-aPE">
                                             <rect key="frame" x="0.0" y="207" width="240" height="34"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="16"/>
                                             <textInputTraits key="textInputTraits"/>
