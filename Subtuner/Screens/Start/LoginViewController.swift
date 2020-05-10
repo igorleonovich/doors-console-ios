@@ -31,10 +31,10 @@ class LoginViewController: BaseViewController {
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
         let vc = SignUpViewController(isModal: false)
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: false)
     }
     @IBAction func forgotPasswordButtonTapped(_ sender: Any) {
         let vc = ForgotPasswordViewController(isModal: false)
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: false)
     }
 }

@@ -83,11 +83,11 @@ class BaseViewController: UIViewController {
     }
     
     @objc func hideKeyboard(_ sender: AnyObject) {
-        view.endEditing(true)
+        view.endEditing(false)
     }
     
     
     @IBAction func backButtonTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: false)
     }
 }
