@@ -38,8 +38,8 @@ class RootViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let loginViewController = LoginViewController(isModal: false)
-        let mainNavigationController = UINavigationController(rootViewController: loginViewController)
+        let logInViewController = LogInViewController(isModal: false)
+        let mainNavigationController = UINavigationController(rootViewController: logInViewController)
         addChild(mainNavigationController)
         mainNavigationController.view.translatesAutoresizingMaskIntoConstraints = false
         centerView.addSubview(mainNavigationController.view)

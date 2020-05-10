@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: BaseViewController {
+class LogInViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,8 @@ class LoginViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    @IBAction func loginButtonTapped(_ sender: Any) {
-    
+    @IBAction func logInButtonTapped(_ sender: Any) {
+        
     }
     
     @IBAction func signUpButtonTapped(_ sender: Any) {

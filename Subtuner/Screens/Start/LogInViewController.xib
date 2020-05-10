@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Subtuner" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInViewController" customModule="Subtuner" customModuleProvider="target">
             <connections>
                 <outlet property="bottomConstraint" destination="Cr4-Fy-FjX" id="K3n-C6-2JX"/>
                 <outlet property="containerHeightConstraint" destination="XgU-2m-cX4" id="0fg-7w-ssm"/>
@@ -48,11 +48,11 @@
                                             <rect key="frame" x="0.0" y="207" width="240" height="32"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
-                                            <state key="normal" title="Login">
+                                            <state key="normal" title="Log In">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <action selector="loginButtonTapped:" destination="-1" eventType="touchUpInside" id="HX2-XA-5ah"/>
+                                                <action selector="logInButtonTapped:" destination="-1" eventType="touchUpInside" id="gv5-2N-oC5"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsf-u3-lWa">

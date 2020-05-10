@@ -22,11 +22,11 @@ class ConsoleViewController: BaseViewController {
     
     @IBAction func menuButtonTapped(_ sender: Any) {
         let optionMenu = UIAlertController(title: nil, message: "Menu", preferredStyle: .actionSheet)
-        let logoutAction = UIAlertAction(title: "Sign Out", style: .destructive, handler: { action in
+        let logOutAction = UIAlertAction(title: "Log Out", style: .destructive, handler: { action in
             
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        [logoutAction, cancelAction].forEach { optionMenu.addAction($0) }
+        [logOutAction, cancelAction].forEach { optionMenu.addAction($0) }
         self.parent?.present(optionMenu, animated: true, completion: nil)
     }
 }
