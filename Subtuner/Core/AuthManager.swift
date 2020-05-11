@@ -28,7 +28,10 @@ class AuthManager {
     func signUp(newUser: NewUser, completion: @escaping () -> Void) {
         signUpDataTask?.cancel()
         
-        let session = URLSession(configuration: sessionConfiguration)
+        let sessionDelegate = SessionDelegate()
+        let session = URLSession(configuration: sessionConfiguration, delegate: sessionDelegate, delegateQueue: OperationQueue.main)
+        // TODO: Change main queue
+        
         guard let url = URL(string: "\(Constants.baseURL)users/register") else {
             return
         }
@@ -69,5 +72,13 @@ class AuthManager {
         } catch {
             print(error)
         }
+    }
+}
+
+class SessionDelegate: NSObject, URLSessionDelegate {
+    
+    func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        
+        completionHandler(.useCredential, nil)
     }
 }
