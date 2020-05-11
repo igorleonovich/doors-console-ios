@@ -23,7 +23,7 @@ class RootViewController: BaseViewController {
     
     init(core: Core) {
         self.core = core
-        super.init(isModal: false)
+        super.init()
     }
     
     required init?(coder: NSCoder) {
@@ -38,7 +38,41 @@ class RootViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let logInViewController = LogInViewController(isModal: false)
+        showLogInViewController()
+    }
+    
+    private func setupUI() {
+        setupCenterView()
+        showLoadingViewController()
+    }
+    
+    private func setupCenterView() {
+        centerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(centerView)
+        centerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        centerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        centerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        centerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+    }
+    
+    private func showLoadingViewController() {
+        let loadingViewController = LoadingViewController()
+        addChild(loadingViewController)
+        
+        loadingViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        centerView.addSubview(loadingViewController.view)
+        
+        loadingViewController.view.topAnchor.constraint(equalTo: centerView.topAnchor).isActive = true
+        loadingViewController.view.leadingAnchor.constraint(equalTo: centerView.leadingAnchor).isActive = true
+        loadingViewController.view.trailingAnchor.constraint(equalTo: centerView.trailingAnchor).isActive = true
+        loadingViewController.view.bottomAnchor.constraint(equalTo: centerView.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        
+        loadingViewController.didMove(toParent: self)
+        self.loadingViewController = loadingViewController
+    }
+    
+    private func showLogInViewController() {
+        let logInViewController = LogInViewController(core: core)
         let mainNavigationController = UINavigationController(rootViewController: logInViewController)
         addChild(mainNavigationController)
         mainNavigationController.view.translatesAutoresizingMaskIntoConstraints = false
@@ -58,26 +92,7 @@ class RootViewController: BaseViewController {
         self.loadingViewController = nil
     }
     
-    private func setupUI() {
-        centerView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(centerView)
-        centerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        centerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        centerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        centerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+    private func showConsoleViewController() {
         
-        let loadingViewController = LoadingViewController()
-        addChild(loadingViewController)
-        
-        loadingViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        centerView.addSubview(loadingViewController.view)
-        
-        loadingViewController.view.topAnchor.constraint(equalTo: centerView.topAnchor).isActive = true
-        loadingViewController.view.leadingAnchor.constraint(equalTo: centerView.leadingAnchor).isActive = true
-        loadingViewController.view.trailingAnchor.constraint(equalTo: centerView.trailingAnchor).isActive = true
-        loadingViewController.view.bottomAnchor.constraint(equalTo: centerView.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        
-        loadingViewController.didMove(toParent: self)
-        self.loadingViewController = loadingViewController
     }
 }

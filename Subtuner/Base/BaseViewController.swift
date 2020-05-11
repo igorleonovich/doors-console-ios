@@ -16,7 +16,7 @@ class BaseViewController: UIViewController {
     var considerBottomSafeArea = false
     var initialBottomIndent: CGFloat = 0.0
     
-    init(isModal: Bool) {
+    init(isModal: Bool = false) {
         super.init(nibName: nil, bundle: nil)
         if !isModal {
             self.modalSetup()

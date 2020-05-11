@@ -9,5 +9,5 @@
 import Foundation
 
 class Core {
-    
+    let authManager = AuthManager()
 }

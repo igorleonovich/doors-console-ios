@@ -30,6 +30,17 @@
 		C3BBC09F246766F6001158C8 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBC09E246766F6001158C8 /* SignUpViewController.xib */; };
 		C3BBC0A124676A7D001158C8 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0A024676A7D001158C8 /* ForgotPasswordViewController.swift */; };
 		C3BBC0A324676AC0001158C8 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBC0A224676AC0001158C8 /* ForgotPasswordViewController.xib */; };
+		C3BBC0A7246948EE001158C8 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0A6246948EE001158C8 /* AuthManager.swift */; };
+		C3BBC0AF24694E2F001158C8 /* InternetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0AA24694E2F001158C8 /* InternetProtocol.swift */; };
+		C3BBC0B024694E2F001158C8 /* InternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0AB24694E2F001158C8 /* InternetAuthenticationType.swift */; };
+		C3BBC0B124694E2F001158C8 /* SecureStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0AC24694E2F001158C8 /* SecureStoreError.swift */; };
+		C3BBC0B224694E2F001158C8 /* SecureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0AD24694E2F001158C8 /* SecureStore.swift */; };
+		C3BBC0B324694E2F001158C8 /* SecureStoreQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0AE24694E2F001158C8 /* SecureStoreQueryable.swift */; };
+		C3BBC0B524694F2E001158C8 /* SecureStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0B424694F2E001158C8 /* SecureStoreTests.swift */; };
+		C3BBC0B7246952F5001158C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0B6246952F5001158C8 /* Constants.swift */; };
+		C3BBC0BA246956E1001158C8 /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0B9246956E1001158C8 /* NewUser.swift */; };
+		C3BBC0BE24695EE5001158C8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0BD24695EE5001158C8 /* User.swift */; };
+		C3BBC0C024695F7A001158C8 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0BF24695F7A001158C8 /* SignUpResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +90,18 @@
 		C3BBC09E246766F6001158C8 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		C3BBC0A024676A7D001158C8 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		C3BBC0A224676AC0001158C8 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		C3BBC0A6246948EE001158C8 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		C3BBC0A924694E2E001158C8 /* SecureStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecureStore.h; sourceTree = "<group>"; };
+		C3BBC0AA24694E2F001158C8 /* InternetProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetProtocol.swift; sourceTree = "<group>"; };
+		C3BBC0AB24694E2F001158C8 /* InternetAuthenticationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetAuthenticationType.swift; sourceTree = "<group>"; };
+		C3BBC0AC24694E2F001158C8 /* SecureStoreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStoreError.swift; sourceTree = "<group>"; };
+		C3BBC0AD24694E2F001158C8 /* SecureStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStore.swift; sourceTree = "<group>"; };
+		C3BBC0AE24694E2F001158C8 /* SecureStoreQueryable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStoreQueryable.swift; sourceTree = "<group>"; };
+		C3BBC0B424694F2E001158C8 /* SecureStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStoreTests.swift; sourceTree = "<group>"; };
+		C3BBC0B6246952F5001158C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C3BBC0B9246956E1001158C8 /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
+		C3BBC0BD24695EE5001158C8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C3BBC0BF24695F7A001158C8 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +152,7 @@
 		C38FB46124612F43000C187C /* Subtuner */ = {
 			isa = PBXGroup;
 			children = (
+				C3BBC0B8246956B0001158C8 /* Models */,
 				C3BBC0822467341E001158C8 /* Base */,
 				C3BBC08B246746E6001158C8 /* Screens */,
 				C3BBC08E2467478C001158C8 /* Core */,
@@ -149,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				C38FB47924612F47000C187C /* SubtunerTests.swift */,
+				C3BBC0B424694F2E001158C8 /* SecureStoreTests.swift */,
 				C38FB47B24612F47000C187C /* Info.plist */,
 			);
 			path = SubtunerTests;
@@ -198,6 +223,7 @@
 		C3BBC085246742FC001158C8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C3BBC0A824694E10001158C8 /* SecureStore */,
 				C3BBC08624674306001158C8 /* Device.swift */,
 			);
 			path = Utils;
@@ -224,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				C3BBC08F2467479C001158C8 /* Core.swift */,
+				C3BBC0A6246948EE001158C8 /* AuthManager.swift */,
+				C3BBC0B6246952F5001158C8 /* Constants.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -235,6 +263,45 @@
 				C3BBC09A24675256001158C8 /* ConsoleViewController.xib */,
 			);
 			path = Console;
+			sourceTree = "<group>";
+		};
+		C3BBC0A824694E10001158C8 /* SecureStore */ = {
+			isa = PBXGroup;
+			children = (
+				C3BBC0AB24694E2F001158C8 /* InternetAuthenticationType.swift */,
+				C3BBC0AA24694E2F001158C8 /* InternetProtocol.swift */,
+				C3BBC0A924694E2E001158C8 /* SecureStore.h */,
+				C3BBC0AD24694E2F001158C8 /* SecureStore.swift */,
+				C3BBC0AC24694E2F001158C8 /* SecureStoreError.swift */,
+				C3BBC0AE24694E2F001158C8 /* SecureStoreQueryable.swift */,
+			);
+			path = SecureStore;
+			sourceTree = "<group>";
+		};
+		C3BBC0B8246956B0001158C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C3BBC0BC24695ED1001158C8 /* Input */,
+				C3BBC0BB24695ECB001158C8 /* Output */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C3BBC0BB24695ECB001158C8 /* Output */ = {
+			isa = PBXGroup;
+			children = (
+				C3BBC0B9246956E1001158C8 /* NewUser.swift */,
+			);
+			path = Output;
+			sourceTree = "<group>";
+		};
+		C3BBC0BC24695ED1001158C8 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				C3BBC0BD24695EE5001158C8 /* User.swift */,
+				C3BBC0BF24695F7A001158C8 /* SignUpResponse.swift */,
+			);
+			path = Input;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,7 +440,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3BBC0C024695F7A001158C8 /* SignUpResponse.swift in Sources */,
 				C3BBC07D24672E72001158C8 /* ConsoleViewController.swift in Sources */,
+				C3BBC0A7246948EE001158C8 /* AuthManager.swift in Sources */,
+				C3BBC0B224694E2F001158C8 /* SecureStore.swift in Sources */,
 				C3BBC07924671098001158C8 /* LogInViewController.swift in Sources */,
 				C38FB46724612F43000C187C /* LoadingViewController.swift in Sources */,
 				C3BBC08D2467472F001158C8 /* RootViewController.swift in Sources */,
@@ -381,11 +451,18 @@
 				C3BBC08A246746BE001158C8 /* Settings.swift in Sources */,
 				C3BBC0902467479C001158C8 /* Core.swift in Sources */,
 				C3BBC08124673395001158C8 /* UIViewController+Extensions.swift in Sources */,
+				C3BBC0BE24695EE5001158C8 /* User.swift in Sources */,
+				C3BBC0AF24694E2F001158C8 /* InternetProtocol.swift in Sources */,
 				C38FB46324612F43000C187C /* AppDelegate.swift in Sources */,
 				C3BBC0842467342E001158C8 /* BaseViewController.swift in Sources */,
+				C3BBC0BA246956E1001158C8 /* NewUser.swift in Sources */,
+				C3BBC0B024694E2F001158C8 /* InternetAuthenticationType.swift in Sources */,
 				C3BBC0A124676A7D001158C8 /* ForgotPasswordViewController.swift in Sources */,
+				C3BBC0B7246952F5001158C8 /* Constants.swift in Sources */,
 				C38FB46524612F43000C187C /* SceneDelegate.swift in Sources */,
+				C3BBC0B324694E2F001158C8 /* SecureStoreQueryable.swift in Sources */,
 				C3BBC07B24672E4C001158C8 /* SignUpViewController.swift in Sources */,
+				C3BBC0B124694E2F001158C8 /* SecureStoreError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3BBC0B524694F2E001158C8 /* SecureStoreTests.swift in Sources */,
 				C38FB47A24612F47000C187C /* SubtunerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
