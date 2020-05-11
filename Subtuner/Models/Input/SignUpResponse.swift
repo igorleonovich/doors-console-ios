@@ -11,6 +11,6 @@ import Foundation
 struct SignUpResponse: Codable {
     let status: String
     let user: User
-//    let refreshToken: String
-//    let accessToken: String
+    let refreshToken: String
+    let accessToken: String
 }
