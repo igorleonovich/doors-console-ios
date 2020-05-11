@@ -47,8 +47,13 @@ class SignUpViewController: BaseViewController {
                 return
         }
         let newUser = NewUser(username: username, email: email, password: password)
-        core.authManager.signUp(newUser: newUser) {
-            print("success")
+        core.authManager.signUp(newUser: newUser) { [weak self] error in
+            if let error = error {
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alert.addAction(okAction)
+                self?.present(alert, animated: true, completion: nil)
+            }
         }
     }
 }

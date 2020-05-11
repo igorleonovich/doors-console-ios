@@ -41,6 +41,7 @@
 		C3BBC0BA246956E1001158C8 /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0B9246956E1001158C8 /* NewUser.swift */; };
 		C3BBC0BE24695EE5001158C8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0BD24695EE5001158C8 /* User.swift */; };
 		C3BBC0C024695F7A001158C8 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0BF24695F7A001158C8 /* SignUpResponse.swift */; };
+		C3BBC0C22469CA98001158C8 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBC0C12469CA98001158C8 /* ServerError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		C3BBC0B9246956E1001158C8 /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
 		C3BBC0BD24695EE5001158C8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C3BBC0BF24695F7A001158C8 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		C3BBC0C12469CA98001158C8 /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +302,7 @@
 			children = (
 				C3BBC0BD24695EE5001158C8 /* User.swift */,
 				C3BBC0BF24695F7A001158C8 /* SignUpResponse.swift */,
+				C3BBC0C12469CA98001158C8 /* ServerError.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				C3BBC0A7246948EE001158C8 /* AuthManager.swift in Sources */,
 				C3BBC0B224694E2F001158C8 /* SecureStore.swift in Sources */,
 				C3BBC07924671098001158C8 /* LogInViewController.swift in Sources */,
+				C3BBC0C22469CA98001158C8 /* ServerError.swift in Sources */,
 				C38FB46724612F43000C187C /* LoadingViewController.swift in Sources */,
 				C3BBC08D2467472F001158C8 /* RootViewController.swift in Sources */,
 				C3BBC08724674306001158C8 /* Device.swift in Sources */,

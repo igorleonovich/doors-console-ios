@@ -25,7 +25,7 @@ class AuthManager {
         secureStoreWithGenericPwd = SecureStore(secureStoreQueryable: genericPwdQueryable)
     }
     
-    func signUp(newUser: NewUser, completion: @escaping () -> Void) {
+    func signUp(newUser: NewUser, completion: @escaping (Swift.Error?) -> Void) {
         signUpDataTask?.cancel()
         
         let sessionDelegate = SessionDelegate()
@@ -52,10 +52,18 @@ class AuthManager {
                             let signUpResponse = try JSONDecoder().decode(SignUpResponse.self, from: data)
                             print(signUpResponse)
                         } catch {
-                            print(error)
+                            completion(error)
                         }
+                    } else if let error = error {
+                        completion(error)
                     } else {
-                        print(response.statusCode)
+                        do {
+                            let serverError = try JSONDecoder().decode(ServerError.self, from: data)
+                            let error = Error.serverError(reason: serverError.reason)
+                            completion(error)
+                        } catch {
+                            completion(error)
+                        }
                     }
                 }
             }
@@ -80,5 +88,23 @@ class SessionDelegate: NSObject, URLSessionDelegate {
     func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
         
         completionHandler(.useCredential, nil)
+    }
+}
+
+extension AuthManager {
+    indirect enum Error: Swift.Error {
+        case someError(error: Error)
+        case serverError(reason: String)
+    }
+}
+
+extension AuthManager.Error: LocalizedError {
+    var errorDescription: String? {
+        switch self {
+        case .serverError(let reason):
+            return reason
+        case .someError(let error):
+            return error.localizedDescription
+        }
     }
 }
