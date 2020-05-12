@@ -11,6 +11,8 @@
             <connections>
                 <outlet property="bottomConstraint" destination="Cr4-Fy-FjX" id="K3n-C6-2JX"/>
                 <outlet property="containerHeightConstraint" destination="XgU-2m-cX4" id="0fg-7w-ssm"/>
+                <outlet property="emailTextField" destination="kue-Uh-7BQ" id="AiC-HG-YIh"/>
+                <outlet property="passwordTextField" destination="ag0-ue-AxG" id="yPP-TS-SuN"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Tj3-qZ-6Qu"/>
             </connections>
         </placeholder>

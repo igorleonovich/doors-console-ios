@@ -11,6 +11,7 @@
 		9011F301752610A4F75315B2 /* Pods_Subtuner_SubtunerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F32CC25CD5FC16C217BF8AB /* Pods_Subtuner_SubtunerUITests.framework */; };
 		94B40EAFBB4FB03062AD9960 /* Pods_SubtunerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5410EF96AC7ED117FC721A1 /* Pods_SubtunerTests.framework */; };
 		C37D4BEF246AF35800B94F39 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4BEE246AF35800B94F39 /* UserManager.swift */; };
+		C37D4BF1246AFE0000B94F39 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4BF0246AFE0000B94F39 /* Login.swift */; };
 		C38FB46324612F43000C187C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FB46224612F43000C187C /* AppDelegate.swift */; };
 		C38FB46524612F43000C187C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FB46424612F43000C187C /* SceneDelegate.swift */; };
 		C38FB46724612F43000C187C /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FB46624612F43000C187C /* LoadingViewController.swift */; };
@@ -74,6 +75,7 @@
 		B5410EF96AC7ED117FC721A1 /* Pods_SubtunerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SubtunerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B648C3F60EE1C42EA7AF91E6 /* Pods-SubtunerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubtunerTests.debug.xcconfig"; path = "Target Support Files/Pods-SubtunerTests/Pods-SubtunerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C37D4BEE246AF35800B94F39 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		C37D4BF0246AFE0000B94F39 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		C38FB45F24612F43000C187C /* Subtuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subtuner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38FB46224612F43000C187C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C38FB46424612F43000C187C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				C3BBC0B9246956E1001158C8 /* NewUser.swift */,
+				C37D4BF0246AFE0000B94F39 /* Login.swift */,
 			);
 			path = Output;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				C3BBC0BE24695EE5001158C8 /* User.swift in Sources */,
 				C3BBC0AF24694E2F001158C8 /* InternetProtocol.swift in Sources */,
 				C38FB46324612F43000C187C /* AppDelegate.swift in Sources */,
+				C37D4BF1246AFE0000B94F39 /* Login.swift in Sources */,
 				C3BBC0842467342E001158C8 /* BaseViewController.swift in Sources */,
 				C3BBC0BA246956E1001158C8 /* NewUser.swift in Sources */,
 				C3BBC0B024694E2F001158C8 /* InternetAuthenticationType.swift in Sources */,

@@ -11,13 +11,14 @@ import Foundation
 class UserManager {
     
     var core: Core!
-    lazy var userFileURL: URL? = {
+    
+    private lazy var userFileURL: URL? = {
         guard let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
         let fileURL = directoryURL.appendingPathComponent("user.json")
         print(fileURL)
         return fileURL
     }()
-    var _user: User?
+    
     var user: User? {
         get {
             do {
@@ -32,8 +33,12 @@ class UserManager {
         set {
             guard let userFileURL = userFileURL else { return }
             do {
-                let data = try JSONEncoder().encode(newValue)
-                try data.write(to: userFileURL)
+                if newValue == nil {
+                    try FileManager.default.removeItem(at: userFileURL)
+                } else {
+                    let data = try JSONEncoder().encode(newValue)
+                    try data.write(to: userFileURL)
+                }
             } catch {
                 print(error)
             }

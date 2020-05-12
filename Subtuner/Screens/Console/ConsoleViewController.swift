@@ -38,7 +38,6 @@ class ConsoleViewController: BaseViewController {
             MBProgressHUD.showAdded(to: self.view, animated: true)
             self.core.authManager.logOut { [weak self] error in
                 guard let `self` = self else { return }
-                MBProgressHUD.hide(for: self.view, animated: true)
                 if let error = error {
                     let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
                     let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -49,6 +48,7 @@ class ConsoleViewController: BaseViewController {
                     rootViewController.removeConsoleNavigationController()
                     rootViewController.showAuthNavigationController()
                 }
+                MBProgressHUD.hide(for: self.view, animated: true)
             }
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
