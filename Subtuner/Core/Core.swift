@@ -10,4 +10,10 @@ import Foundation
 
 class Core {
     let authManager = AuthManager()
+    let userManager = UserManager()
+    
+    init() {
+        authManager.core = self
+        userManager.core = self
+    }
 }

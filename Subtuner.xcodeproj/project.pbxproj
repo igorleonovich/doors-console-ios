@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		37B0498A4010035A416CA5F3 /* Pods_Subtuner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39ACEF413DD92021F1709D8 /* Pods_Subtuner.framework */; };
 		9011F301752610A4F75315B2 /* Pods_Subtuner_SubtunerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F32CC25CD5FC16C217BF8AB /* Pods_Subtuner_SubtunerUITests.framework */; };
 		94B40EAFBB4FB03062AD9960 /* Pods_SubtunerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5410EF96AC7ED117FC721A1 /* Pods_SubtunerTests.framework */; };
+		C37D4BEF246AF35800B94F39 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4BEE246AF35800B94F39 /* UserManager.swift */; };
 		C38FB46324612F43000C187C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FB46224612F43000C187C /* AppDelegate.swift */; };
 		C38FB46524612F43000C187C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FB46424612F43000C187C /* SceneDelegate.swift */; };
 		C38FB46724612F43000C187C /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FB46624612F43000C187C /* LoadingViewController.swift */; };
@@ -72,6 +73,7 @@
 		8DBF6BF431811BDC1EC7B91D /* Pods-Subtuner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtuner.debug.xcconfig"; path = "Target Support Files/Pods-Subtuner/Pods-Subtuner.debug.xcconfig"; sourceTree = "<group>"; };
 		B5410EF96AC7ED117FC721A1 /* Pods_SubtunerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SubtunerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B648C3F60EE1C42EA7AF91E6 /* Pods-SubtunerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubtunerTests.debug.xcconfig"; path = "Target Support Files/Pods-SubtunerTests/Pods-SubtunerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C37D4BEE246AF35800B94F39 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		C38FB45F24612F43000C187C /* Subtuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subtuner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38FB46224612F43000C187C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C38FB46424612F43000C187C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,7 +158,6 @@
 				B648C3F60EE1C42EA7AF91E6 /* Pods-SubtunerTests.debug.xcconfig */,
 				63AFE602F2C55B9EB7CDB1CF /* Pods-SubtunerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -295,6 +296,7 @@
 				C3BBC08F2467479C001158C8 /* Core.swift */,
 				C3BBC0A6246948EE001158C8 /* AuthManager.swift */,
 				C3BBC0B6246952F5001158C8 /* Constants.swift */,
+				C37D4BEE246AF35800B94F39 /* UserManager.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -610,6 +612,7 @@
 				C3BBC0842467342E001158C8 /* BaseViewController.swift in Sources */,
 				C3BBC0BA246956E1001158C8 /* NewUser.swift in Sources */,
 				C3BBC0B024694E2F001158C8 /* InternetAuthenticationType.swift in Sources */,
+				C37D4BEF246AF35800B94F39 /* UserManager.swift in Sources */,
 				C3BBC0A124676A7D001158C8 /* ForgotPasswordViewController.swift in Sources */,
 				C3BBC0B7246952F5001158C8 /* Constants.swift in Sources */,
 				C38FB46524612F43000C187C /* SceneDelegate.swift in Sources */,

@@ -10,6 +10,7 @@ import Foundation
 
 class AuthManager {
     
+    var core: Core!
     var secureStoreWithGenericPwd: SecureStore!
     
     lazy var sessionConfiguration: URLSessionConfiguration = {
@@ -41,8 +42,9 @@ class AuthManager {
             request.httpMethod = "POST"
             request.httpBody = data
             signUpDataTask = session.dataTask(with: request) { [weak self] (data, response, error) in
+                guard let `self` = self else { return }
                 defer {
-                    self?.signUpDataTask = nil
+                    self.signUpDataTask = nil
                 }
                 if let error = error {
                     print(error)
@@ -50,7 +52,10 @@ class AuthManager {
                     if response.statusCode == 200 {
                         do {
                             let signUpResponse = try JSONDecoder().decode(SignUpResponse.self, from: data)
-                            print(signUpResponse)
+                            try self.secureStoreWithGenericPwd.setValue(signUpResponse.accessToken, for: "accessToken")
+                            try self.secureStoreWithGenericPwd.setValue(signUpResponse.refreshToken, for: "refreshToken")
+                            self.core.userManager.user = signUpResponse.user
+                            completion(nil)
                         } catch {
                             completion(error)
                         }
@@ -79,6 +84,16 @@ class AuthManager {
             try secureStoreWithGenericPwd.setValue("refreshToken", for: "refreshToken")
         } catch {
             print(error)
+        }
+    }
+    
+    func logOut(_ completion: @escaping (Swift.Error?) -> Void) {
+        do {
+            try self.secureStoreWithGenericPwd.removeValue(for: "accessToken")
+            try self.secureStoreWithGenericPwd.removeValue(for: "refreshToken")
+            completion(nil)
+        } catch {
+            completion(error)
         }
     }
 }
