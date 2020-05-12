@@ -8,19 +8,12 @@
 
 import UIKit
 import MBProgressHUD
-import JWTDecode
 
 class ConsoleViewController: BaseViewController {
     
     let core: Core
     
     var checkDataTask: URLSessionTask?
-    
-    lazy var sessionConfiguration: URLSessionConfiguration = {
-        let config = URLSessionConfiguration.default
-        config.httpAdditionalHeaders = ["Content-Type": "application/json"]
-        return config
-    }()
     
     init(core: Core) {
         self.core = core
@@ -34,49 +27,16 @@ class ConsoleViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        
-        do {
-            guard let accessToken = try core.authManager.secureStoreWithGenericPwd.getValue(for: "accessToken") else { return }
-            sessionConfiguration.httpAdditionalHeaders!["Authorization"] = "Bearer \(accessToken)"
-            
-            checkAndTryToRefreshAccessToken { error in
-                if let error = error {
-                    let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alert.addAction(okAction)
-                    self.present(alert, animated: true, completion: nil)
-                } else {
-                    self.signedCall { error in
-                        print("")
-                    }
-                }
-            }
-        } catch {
-            print(error)
-        }
-    }
-    
-    func checkAndTryToRefreshAccessToken(_ completion: @escaping (Swift.Error?) -> Void) {
-        do {
-            guard let accessToken = try core.authManager.secureStoreWithGenericPwd.getValue(for: "accessToken") else { return }
-            let jwt = try decode(jwt: accessToken)
-            if jwt.expired {
-                // Maybe TODO: Add ~5 sec before expiration check
-                core.authManager.refreshToken { error in
-                    completion(error)
-                }
-            } else {
-                completion(nil)
-            }
-        } catch {
-            completion(nil)
+        self.signedCall { error in
+            print("")
         }
     }
     
     func signedCall(_ completion: @escaping (Swift.Error?) -> Void) {
         checkDataTask?.cancel()
         
-        let session = URLSession(configuration: sessionConfiguration)
+        let sessionDelegate = SessionDelegate()
+        let session = URLSession(configuration: core.signedSessionConfiguration, delegate: sessionDelegate, delegateQueue: OperationQueue.main)
         
         guard let url = URL(string: "\(Constants.baseURL)users/profile") else {
             return
@@ -101,7 +61,7 @@ class ConsoleViewController: BaseViewController {
                 }
             }
         }
-        checkDataTask?.resume()
+        checkDataTask?.signedResume(core: core)
     }
 
     override func viewWillDisappear(_ animated: Bool) {

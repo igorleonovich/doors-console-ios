@@ -33,7 +33,6 @@ class AuthManager {
         
         let sessionDelegate = SessionDelegate()
         let session = URLSession(configuration: sessionConfiguration, delegate: sessionDelegate, delegateQueue: OperationQueue.main)
-        // TODO: Change main queue
         
         guard let url = URL(string: "\(Constants.baseURL)users/register") else {
             return
@@ -54,7 +53,9 @@ class AuthManager {
                     if response.statusCode == 200 {
                         do {
                             let signUpResponse = try JSONDecoder().decode(LogInSignUpInput.self, from: data)
-                            try self.secureStoreWithGenericPwd.setValue(signUpResponse.accessToken, for: "accessToken")
+                            let accessToken = signUpResponse.accessToken
+                            try self.secureStoreWithGenericPwd.setValue(accessToken, for: "accessToken")
+                            self.core.signedSessionConfiguration.httpAdditionalHeaders!["Authorization"] = "Bearer \(accessToken)"
                             try self.secureStoreWithGenericPwd.setValue(signUpResponse.refreshToken, for: "refreshToken")
                             self.core.userManager.user = signUpResponse.user
                             completion(nil)
@@ -83,7 +84,9 @@ class AuthManager {
     func logIn(login: LoginOutput, _ completion: @escaping (Swift.Error?) -> Void) {
         logInDataTask?.cancel()
         
-        let session = URLSession(configuration: sessionConfiguration)
+        let sessionDelegate = SessionDelegate()
+        let session = URLSession(configuration: sessionConfiguration, delegate: sessionDelegate, delegateQueue: OperationQueue.main)
+
         
         guard let url = URL(string: "\(Constants.baseURL)users/login") else {
             return
@@ -104,7 +107,9 @@ class AuthManager {
                     if response.statusCode == 200 {
                         do {
                             let logInResponse = try JSONDecoder().decode(LogInSignUpInput.self, from: data)
-                            try self.secureStoreWithGenericPwd.setValue(logInResponse.accessToken, for: "accessToken")
+                            let accessToken = logInResponse.accessToken
+                            try self.secureStoreWithGenericPwd.setValue(accessToken, for: "accessToken")
+                            self.core.signedSessionConfiguration.httpAdditionalHeaders!["Authorization"] = "Bearer \(accessToken)"
                             try self.secureStoreWithGenericPwd.setValue(logInResponse.refreshToken, for: "refreshToken")
                             self.core.userManager.user = logInResponse.user
                             completion(nil)
@@ -144,7 +149,8 @@ class AuthManager {
     func refreshToken(_ completion: @escaping (Swift.Error?) -> Void) {
         refreshTokenDataTask?.cancel()
         
-        let session = URLSession(configuration: sessionConfiguration)
+        let sessionDelegate = SessionDelegate()
+        let session = URLSession(configuration: sessionConfiguration, delegate: sessionDelegate, delegateQueue: OperationQueue.main)
         
         guard let url = URL(string: "\(Constants.baseURL)users/accessToken") else {
             return
@@ -167,7 +173,9 @@ class AuthManager {
                     if response.statusCode == 200 {
                         do {
                             let refreshTokenInput = try JSONDecoder().decode(RefreshTokenInput.self, from: data)
-                            try self.secureStoreWithGenericPwd.setValue(refreshTokenInput.accessToken, for: "accessToken")
+                            let accessToken = refreshTokenInput.accessToken
+                            try self.secureStoreWithGenericPwd.setValue(accessToken, for: "accessToken")
+                            self.core.signedSessionConfiguration.httpAdditionalHeaders!["Authorization"] = "Bearer \(accessToken)"
                             completion(nil)
                         } catch {
                             completion(error)
@@ -185,7 +193,7 @@ class AuthManager {
                     }
                 }
             }
-            logInDataTask?.resume()
+            refreshTokenDataTask?.resume()
         } catch {
             completion(error)
         }

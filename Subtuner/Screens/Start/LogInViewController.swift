@@ -44,7 +44,7 @@ class LogInViewController: BaseViewController {
         MBProgressHUD.showAdded(to: view, animated: true)
         guard let email = emailTextField.text,
             let password = passwordTextField.text else { return }
-        let login = Login(email: email, password: password)
+        let login = LoginOutput(email: email, password: password)
         core.authManager.logIn(login: login) { [weak self] error in
             guard let `self` = self else { return }
             MBProgressHUD.hide(for: self.view, animated: true)

@@ -48,7 +48,7 @@ class SignUpViewController: BaseViewController {
             let password = passwordTextField.text else {
                 return
         }
-        let newUser = NewUser(username: username, email: email, password: password)
+        let newUser = NewUserOutput(username: username, email: email, password: password)
         core.authManager.signUp(newUser: newUser) { [weak self] error in
             guard let `self` = self else { return }
             MBProgressHUD.hide(for: self.view, animated: true)
