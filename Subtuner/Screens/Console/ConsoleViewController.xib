@@ -25,17 +25,9 @@
                         <action selector="menuButtonTapped:" destination="-1" eventType="touchUpInside" id="XGg-dJ-TNk"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Console" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpP-lw-yYY">
-                    <rect key="frame" x="100.5" y="262.5" width="119" height="43"/>
-                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="36"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="RpP-lw-yYY" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="5ki-bM-IZa"/>
-                <constraint firstItem="RpP-lw-yYY" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Fti-yS-85Z"/>
                 <constraint firstItem="xFf-X3-i8v" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="PnU-x9-fAP"/>
                 <constraint firstItem="xFf-X3-i8v" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="ZRu-MP-vcu"/>
             </constraints>
