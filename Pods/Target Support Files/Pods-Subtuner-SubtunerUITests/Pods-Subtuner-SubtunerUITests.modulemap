@@ -1,0 +1,6 @@
+framework module Pods_Subtuner_SubtunerUITests {
+  umbrella header "Pods-Subtuner-SubtunerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
