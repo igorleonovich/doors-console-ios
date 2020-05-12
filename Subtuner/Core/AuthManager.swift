@@ -48,7 +48,7 @@ class AuthManager {
                     self.signUpDataTask = nil
                 }
                 if let error = error {
-                    print(error)
+                    completion(error)
                 } else if let data = data, let response = response as? HTTPURLResponse {
                     if response.statusCode == 200 {
                         do {
@@ -75,7 +75,7 @@ class AuthManager {
             }
             signUpDataTask?.resume()
         } catch {
-            print(error)
+            completion(error)
         }
     }
     
@@ -100,7 +100,7 @@ class AuthManager {
                     self.logInDataTask = nil
                 }
                 if let error = error {
-                    print(error)
+                    completion(error)
                 } else if let data = data, let response = response as? HTTPURLResponse {
                     if response.statusCode == 200 {
                         do {
@@ -127,7 +127,7 @@ class AuthManager {
             }
             logInDataTask?.resume()
         } catch {
-            print(error)
+            completion(error)
         }
     }
     

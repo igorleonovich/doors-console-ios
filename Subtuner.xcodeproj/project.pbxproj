@@ -12,6 +12,7 @@
 		94B40EAFBB4FB03062AD9960 /* Pods_SubtunerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5410EF96AC7ED117FC721A1 /* Pods_SubtunerTests.framework */; };
 		C37D4BEF246AF35800B94F39 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4BEE246AF35800B94F39 /* UserManager.swift */; };
 		C37D4BF1246AFE0000B94F39 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4BF0246AFE0000B94F39 /* Login.swift */; };
+		C37D4BF3246B157600B94F39 /* UserSuccessInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4BF2246B157600B94F39 /* UserSuccessInput.swift */; };
 		C38FB46324612F43000C187C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FB46224612F43000C187C /* AppDelegate.swift */; };
 		C38FB46524612F43000C187C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FB46424612F43000C187C /* SceneDelegate.swift */; };
 		C38FB46724612F43000C187C /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FB46624612F43000C187C /* LoadingViewController.swift */; };
@@ -76,6 +77,7 @@
 		B648C3F60EE1C42EA7AF91E6 /* Pods-SubtunerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubtunerTests.debug.xcconfig"; path = "Target Support Files/Pods-SubtunerTests/Pods-SubtunerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C37D4BEE246AF35800B94F39 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		C37D4BF0246AFE0000B94F39 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		C37D4BF2246B157600B94F39 /* UserSuccessInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSuccessInput.swift; sourceTree = "<group>"; };
 		C38FB45F24612F43000C187C /* Subtuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subtuner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38FB46224612F43000C187C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C38FB46424612F43000C187C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 				C3BBC0BD24695EE5001158C8 /* User.swift */,
 				C3BBC0BF24695F7A001158C8 /* SignUpResponse.swift */,
 				C3BBC0C12469CA98001158C8 /* ServerError.swift */,
+				C37D4BF2246B157600B94F39 /* UserSuccessInput.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				C3BBC07924671098001158C8 /* LogInViewController.swift in Sources */,
 				C3BBC0C22469CA98001158C8 /* ServerError.swift in Sources */,
 				C38FB46724612F43000C187C /* LoadingViewController.swift in Sources */,
+				C37D4BF3246B157600B94F39 /* UserSuccessInput.swift in Sources */,
 				C3BBC08D2467472F001158C8 /* RootViewController.swift in Sources */,
 				C3BBC08724674306001158C8 /* Device.swift in Sources */,
 				C3BBC08A246746BE001158C8 /* Settings.swift in Sources */,
