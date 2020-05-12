@@ -6,6 +6,7 @@ target 'Subtuner' do
   use_frameworks!
 
   pod 'MBProgressHUD', '~> 1.2.0'
+  pod 'JWTDecode', '~> 2.4'
 
   # Pods for Subtuner
 

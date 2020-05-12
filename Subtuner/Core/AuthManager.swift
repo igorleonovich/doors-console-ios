@@ -21,13 +21,14 @@ class AuthManager {
     
     var signUpDataTask: URLSessionDataTask?
     var logInDataTask: URLSessionDataTask?
+    var refreshTokenDataTask: URLSessionDataTask?
     
     init() {
         let genericPwdQueryable = GenericPasswordQueryable(service: "Subtuner")
         secureStoreWithGenericPwd = SecureStore(secureStoreQueryable: genericPwdQueryable)
     }
     
-    func signUp(newUser: NewUser, completion: @escaping (Swift.Error?) -> Void) {
+    func signUp(newUser: NewUserOutput, completion: @escaping (Swift.Error?) -> Void) {
         signUpDataTask?.cancel()
         
         let sessionDelegate = SessionDelegate()
@@ -52,7 +53,7 @@ class AuthManager {
                 } else if let data = data, let response = response as? HTTPURLResponse {
                     if response.statusCode == 200 {
                         do {
-                            let signUpResponse = try JSONDecoder().decode(LogInSignUpResponse.self, from: data)
+                            let signUpResponse = try JSONDecoder().decode(LogInSignUpInput.self, from: data)
                             try self.secureStoreWithGenericPwd.setValue(signUpResponse.accessToken, for: "accessToken")
                             try self.secureStoreWithGenericPwd.setValue(signUpResponse.refreshToken, for: "refreshToken")
                             self.core.userManager.user = signUpResponse.user
@@ -79,12 +80,10 @@ class AuthManager {
         }
     }
     
-    func logIn(login: Login, _ completion: @escaping (Swift.Error?) -> Void) {
-       logInDataTask?.cancel()
+    func logIn(login: LoginOutput, _ completion: @escaping (Swift.Error?) -> Void) {
+        logInDataTask?.cancel()
         
-        let sessionDelegate = SessionDelegate()
-        let session = URLSession(configuration: sessionConfiguration, delegate: sessionDelegate, delegateQueue: OperationQueue.main)
-        // TODO: Change main queue
+        let session = URLSession(configuration: sessionConfiguration)
         
         guard let url = URL(string: "\(Constants.baseURL)users/login") else {
             return
@@ -104,7 +103,7 @@ class AuthManager {
                 } else if let data = data, let response = response as? HTTPURLResponse {
                     if response.statusCode == 200 {
                         do {
-                            let logInResponse = try JSONDecoder().decode(LogInSignUpResponse.self, from: data)
+                            let logInResponse = try JSONDecoder().decode(LogInSignUpInput.self, from: data)
                             try self.secureStoreWithGenericPwd.setValue(logInResponse.accessToken, for: "accessToken")
                             try self.secureStoreWithGenericPwd.setValue(logInResponse.refreshToken, for: "refreshToken")
                             self.core.userManager.user = logInResponse.user
@@ -137,6 +136,56 @@ class AuthManager {
             try self.secureStoreWithGenericPwd.removeValue(for: "refreshToken")
             core.userManager.user = nil
             completion(nil)
+        } catch {
+            completion(error)
+        }
+    }
+    
+    func refreshToken(_ completion: @escaping (Swift.Error?) -> Void) {
+        refreshTokenDataTask?.cancel()
+        
+        let session = URLSession(configuration: sessionConfiguration)
+        
+        guard let url = URL(string: "\(Constants.baseURL)users/accessToken") else {
+            return
+        }
+        var request = URLRequest(url: url)
+        do {
+            guard let refreshToken = try secureStoreWithGenericPwd.getValue(for: "refreshToken") else { return }
+            let refreshTokenOutput = RefreshTokenOutput(refreshToken: refreshToken)
+            let data = try JSONEncoder().encode(refreshTokenOutput)
+            request.httpMethod = "POST"
+            request.httpBody = data
+            refreshTokenDataTask = session.dataTask(with: request) { [weak self] (data, response, error) in
+                guard let `self` = self else { return }
+                defer {
+                    self.refreshTokenDataTask = nil
+                }
+                if let error = error {
+                    completion(error)
+                } else if let data = data, let response = response as? HTTPURLResponse {
+                    if response.statusCode == 200 {
+                        do {
+                            let refreshTokenInput = try JSONDecoder().decode(RefreshTokenInput.self, from: data)
+                            try self.secureStoreWithGenericPwd.setValue(refreshTokenInput.accessToken, for: "accessToken")
+                            completion(nil)
+                        } catch {
+                            completion(error)
+                        }
+                    } else if let error = error {
+                        completion(error)
+                    } else {
+                        do {
+                            let serverError = try JSONDecoder().decode(ServerError.self, from: data)
+                            let error = Error.serverError(reason: serverError.reason)
+                            completion(error)
+                        } catch {
+                            completion(error)
+                        }
+                    }
+                }
+            }
+            logInDataTask?.resume()
         } catch {
             completion(error)
         }

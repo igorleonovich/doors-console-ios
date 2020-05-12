@@ -8,6 +8,7 @@
 
 import UIKit
 import MBProgressHUD
+import JWTDecode
 
 class ConsoleViewController: BaseViewController {
     
@@ -37,20 +38,45 @@ class ConsoleViewController: BaseViewController {
         do {
             guard let accessToken = try core.authManager.secureStoreWithGenericPwd.getValue(for: "accessToken") else { return }
             sessionConfiguration.httpAdditionalHeaders!["Authorization"] = "Bearer \(accessToken)"
-            check { error in
-                print("")
+            
+            checkAndTryToRefreshAccessToken { error in
+                if let error = error {
+                    let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true, completion: nil)
+                } else {
+                    self.signedCall { error in
+                        print("")
+                    }
+                }
             }
         } catch {
             print(error)
         }
     }
     
-    func check(_ completion: @escaping (Swift.Error?) -> Void) {
-       checkDataTask?.cancel()
+    func checkAndTryToRefreshAccessToken(_ completion: @escaping (Swift.Error?) -> Void) {
+        do {
+            guard let accessToken = try core.authManager.secureStoreWithGenericPwd.getValue(for: "accessToken") else { return }
+            let jwt = try decode(jwt: accessToken)
+            if jwt.expired {
+                // Maybe TODO: Add ~5 sec before expiration check
+                core.authManager.refreshToken { error in
+                    completion(error)
+                }
+            } else {
+                completion(nil)
+            }
+        } catch {
+            completion(nil)
+        }
+    }
+    
+    func signedCall(_ completion: @escaping (Swift.Error?) -> Void) {
+        checkDataTask?.cancel()
         
-        let sessionDelegate = SessionDelegate()
-        let session = URLSession(configuration: sessionConfiguration, delegate: sessionDelegate, delegateQueue: OperationQueue.main)
-        // TODO: Change main queue
+        let session = URLSession(configuration: sessionConfiguration)
         
         guard let url = URL(string: "\(Constants.baseURL)users/profile") else {
             return
