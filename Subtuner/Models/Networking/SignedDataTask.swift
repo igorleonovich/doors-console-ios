@@ -25,10 +25,10 @@ extension URLSessionTask {
         do {
             guard let accessToken = try core.authManager.secureStoreWithGenericPwd.getValue(for: "accessToken") else { return }
             let jwt = try decode(jwt: accessToken)
-            if jwt.expired || 1 > 0 {
+            if jwt.expired {
                 // Maybe TODO: Add ~5 sec before expiration check
-                core.authManager.refreshToken { error in
-                    completion(error)
+                core.authManager.refreshToken { optionalError in
+                    completion(optionalError)
                 }
             } else {
                 completion(nil)
