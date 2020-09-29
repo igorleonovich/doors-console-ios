@@ -3,8 +3,8 @@ PODS:
   - MBProgressHUD (1.2.0)
 
 DEPENDENCIES:
-  - JWTDecode (~> 2.4)
-  - MBProgressHUD (~> 1.2.0)
+  - JWTDecode
+  - MBProgressHUD
 
 SPEC REPOS:
   trunk:
@@ -15,6 +15,6 @@ SPEC CHECKSUMS:
   JWTDecode: 4bd4da0cdf0f8154fd467fa48499f34ec057fb88
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
 
-PODFILE CHECKSUM: 95b39141c1cb9ae652e30fdba63e6874563d36cf
+PODFILE CHECKSUM: 3d97643976902a03ac100e7959ef3d8ca5f6eebf
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0.rc.1
