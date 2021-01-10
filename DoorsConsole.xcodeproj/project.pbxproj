@@ -45,7 +45,6 @@
 		C3FB322725AB2D630022B8EF /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31FE25AB2D630022B8EF /* ConsoleViewController.swift */; };
 		C3FB322825AB2D630022B8EF /* ConsoleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FB31FF25AB2D630022B8EF /* ConsoleViewController.xib */; };
 		C3FB322925AB2D630022B8EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB320025AB2D630022B8EF /* AppDelegate.swift */; };
-		C3FB322A25AB2D630022B8EF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3FB320125AB2D630022B8EF /* Info.plist */; };
 		C3FB322B25AB2D630022B8EF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB320325AB2D630022B8EF /* BaseViewController.swift */; };
 		C3FB322C25AB2D630022B8EF /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB320425AB2D630022B8EF /* RootViewController.swift */; };
 		C3FB322D25AB2D630022B8EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB320525AB2D630022B8EF /* SceneDelegate.swift */; };
@@ -510,7 +509,6 @@
 			files = (
 				C3FB321D25AB2D630022B8EF /* Main.storyboard in Resources */,
 				C3FB320C25AB2D630022B8EF /* Assets.xcassets in Resources */,
-				C3FB322A25AB2D630022B8EF /* Info.plist in Resources */,
 				C3FB322525AB2D630022B8EF /* ForgotPasswordViewController.xib in Resources */,
 				C3FB321C25AB2D630022B8EF /* LaunchScreen.storyboard in Resources */,
 				C3FB322825AB2D630022B8EF /* ConsoleViewController.xib in Resources */,
@@ -853,6 +851,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = DoorsConsole;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9TZZKGNZ6W;
+				INFOPLIST_FILE = DoorsConsole/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -871,6 +870,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = DoorsConsole;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9TZZKGNZ6W;
+				INFOPLIST_FILE = DoorsConsole/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
