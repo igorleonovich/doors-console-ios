@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  SignUpResponse.swift
 //  DoorsConsole
 //
 //  Created by Igor Leonovich on 5/11/20.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct User: Codable {
-    let id: Int
-    let username: String
-    let email: String
+struct LoginResponse: Codable {
+    let user: User
+    let refreshToken: String
+    let accessToken: String
 }

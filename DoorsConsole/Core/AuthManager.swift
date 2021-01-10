@@ -28,13 +28,13 @@ class AuthManager {
         secureStoreWithGenericPwd = SecureStore(secureStoreQueryable: genericPwdQueryable)
     }
     
-    func signUp(newUser: NewUserOutput, completion: @escaping (Swift.Error?) -> Void) {
+    func signUp(newUser: UserRequest, completion: @escaping (Swift.Error?) -> Void) {
         signUpDataTask?.cancel()
         
         let sessionDelegate = SessionDelegate()
         let session = URLSession(configuration: sessionConfiguration, delegate: sessionDelegate, delegateQueue: OperationQueue.main)
         
-        guard let url = URL(string: "\(Constants.baseURL)users/register") else {
+        guard let url = URL(string: "\(Constants.baseURL)/auth/register") else {
             return
         }
         var request = URLRequest(url: url)
@@ -52,12 +52,13 @@ class AuthManager {
                 } else if let data = data, let response = response as? HTTPURLResponse {
                     if response.statusCode == 200 {
                         do {
-                            let signUpResponse = try JSONDecoder().decode(LogInSignUpInput.self, from: data)
-                            let accessToken = signUpResponse.accessToken
-                            try self.secureStoreWithGenericPwd.setValue(accessToken, for: "accessToken")
-                            self.core.signedSessionConfiguration.httpAdditionalHeaders!["Authorization"] = "Bearer \(accessToken)"
-                            try self.secureStoreWithGenericPwd.setValue(signUpResponse.refreshToken, for: "refreshToken")
-                            self.core.userManager.user = signUpResponse.user
+                            self.logIn(login: LoginRequest(email: newUser.email, password: newUser.password), completion)
+//                            let signUpResponse = try JSONDecoder().decode(LogInRequest.self, from: data)
+//                            let accessToken = signUpResponse.accessToken
+//                            try self.secureStoreWithGenericPwd.setValue(accessToken, for: "accessToken")
+//                            self.core.signedSessionConfiguration.httpAdditionalHeaders!["Authorization"] = "Bearer \(accessToken)"
+//                            try self.secureStoreWithGenericPwd.setValue(signUpResponse.refreshToken, for: "refreshToken")
+//                            self.core.userManager.user = signUpResponse.user
                             completion(nil)
                         } catch {
                             completion(error)
@@ -81,14 +82,14 @@ class AuthManager {
         }
     }
     
-    func logIn(login: LoginOutput, _ completion: @escaping (Swift.Error?) -> Void) {
+    func logIn(login: LoginRequest, _ completion: @escaping (Swift.Error?) -> Void) {
         logInDataTask?.cancel()
         
         let sessionDelegate = SessionDelegate()
         let session = URLSession(configuration: sessionConfiguration, delegate: sessionDelegate, delegateQueue: OperationQueue.main)
 
         
-        guard let url = URL(string: "\(Constants.baseURL)users/login") else {
+        guard let url = URL(string: "\(Constants.baseURL)/auth/login") else {
             return
         }
         var request = URLRequest(url: url)
@@ -106,7 +107,7 @@ class AuthManager {
                 } else if let data = data, let response = response as? HTTPURLResponse {
                     if response.statusCode == 200 {
                         do {
-                            let logInResponse = try JSONDecoder().decode(LogInSignUpInput.self, from: data)
+                            let logInResponse = try JSONDecoder().decode(LoginResponse.self, from: data)
                             let accessToken = logInResponse.accessToken
                             try self.secureStoreWithGenericPwd.setValue(accessToken, for: "accessToken")
                             self.core.signedSessionConfiguration.httpAdditionalHeaders!["Authorization"] = "Bearer \(accessToken)"
@@ -152,14 +153,14 @@ class AuthManager {
         let sessionDelegate = SessionDelegate()
         let session = URLSession(configuration: sessionConfiguration, delegate: sessionDelegate, delegateQueue: OperationQueue.main)
         
-        guard let url = URL(string: "\(Constants.baseURL)users/accessToken") else {
+        guard let url = URL(string: "\(Constants.baseURL)/auth/accessToken") else {
             return
         }
         var request = URLRequest(url: url)
         do {
             guard let refreshToken = try secureStoreWithGenericPwd.getValue(for: "refreshToken") else { return }
-            let refreshTokenOutput = RefreshTokenOutput(refreshToken: refreshToken)
-            let data = try JSONEncoder().encode(refreshTokenOutput)
+            let refreshTokenRequest = RefreshTokenRequest(refreshToken: refreshToken)
+            let data = try JSONEncoder().encode(refreshTokenRequest)
             request.httpMethod = "POST"
             request.httpBody = data
             refreshTokenDataTask = session.dataTask(with: request) { [weak self] (data, response, error) in

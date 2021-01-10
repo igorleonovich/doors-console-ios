@@ -9,5 +9,5 @@
 import Foundation
 
 struct Constants {
-    static let baseURL = "http://dev-DoorsConsole.com:8090/v1/"
+    static let baseURL = "http://localhost:8090/api"
 }

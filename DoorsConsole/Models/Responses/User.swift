@@ -1,5 +1,5 @@
 //
-//  NewUser.swift
+//  User.swift
 //  DoorsConsole
 //
 //  Created by Igor Leonovich on 5/11/20.
@@ -8,8 +8,9 @@
 
 import Foundation
 
-struct NewUserOutput: Codable {
+struct User: Codable {
+    let id: UUID
     let username: String
     let email: String
-    let password: String
+    let isAdmin: Bool
 }

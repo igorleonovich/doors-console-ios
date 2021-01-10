@@ -1,5 +1,5 @@
 //
-//  UserSuccessInput.swift
+//  Login.swift
 //  DoorsConsole
 //
 //  Created by Igor Leonovich on 5/12/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct UserSuccessInput: Codable {
-    let status: String
-    let user: User
+struct LoginRequest: Codable {
+    let email: String
+    let password: String
 }

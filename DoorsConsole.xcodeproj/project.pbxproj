@@ -22,15 +22,14 @@
 		C3FB321025AB2D630022B8EF /* InternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31DC25AB2D630022B8EF /* InternetAuthenticationType.swift */; };
 		C3FB321125AB2D630022B8EF /* SecureStoreQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31DD25AB2D630022B8EF /* SecureStoreQueryable.swift */; };
 		C3FB321225AB2D630022B8EF /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31DF25AB2D630022B8EF /* Device.swift */; };
-		C3FB321325AB2D630022B8EF /* LogInSignUpInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31E225AB2D630022B8EF /* LogInSignUpInput.swift */; };
+		C3FB321325AB2D630022B8EF /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31E225AB2D630022B8EF /* LoginResponse.swift */; };
 		C3FB321425AB2D630022B8EF /* RefreshTokenInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31E325AB2D630022B8EF /* RefreshTokenInput.swift */; };
 		C3FB321525AB2D630022B8EF /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31E425AB2D630022B8EF /* ServerError.swift */; };
 		C3FB321625AB2D630022B8EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31E525AB2D630022B8EF /* User.swift */; };
-		C3FB321725AB2D630022B8EF /* UserSuccessInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31E625AB2D630022B8EF /* UserSuccessInput.swift */; };
 		C3FB321825AB2D630022B8EF /* SignedDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31E825AB2D630022B8EF /* SignedDataTask.swift */; };
-		C3FB321925AB2D630022B8EF /* LoginOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31EA25AB2D630022B8EF /* LoginOutput.swift */; };
-		C3FB321A25AB2D630022B8EF /* RefreshTokenOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31EB25AB2D630022B8EF /* RefreshTokenOutput.swift */; };
-		C3FB321B25AB2D630022B8EF /* NewUserOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31EC25AB2D630022B8EF /* NewUserOutput.swift */; };
+		C3FB321925AB2D630022B8EF /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31EA25AB2D630022B8EF /* LoginRequest.swift */; };
+		C3FB321A25AB2D630022B8EF /* RefreshTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31EB25AB2D630022B8EF /* RefreshTokenRequest.swift */; };
+		C3FB321B25AB2D630022B8EF /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31EC25AB2D630022B8EF /* UserRequest.swift */; };
 		C3FB321C25AB2D630022B8EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FB31ED25AB2D630022B8EF /* LaunchScreen.storyboard */; };
 		C3FB321D25AB2D630022B8EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FB31EF25AB2D630022B8EF /* Main.storyboard */; };
 		C3FB321E25AB2D630022B8EF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31F225AB2D630022B8EF /* UIViewController+Extensions.swift */; };
@@ -103,15 +102,14 @@
 		C3FB31DD25AB2D630022B8EF /* SecureStoreQueryable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStoreQueryable.swift; sourceTree = "<group>"; };
 		C3FB31DE25AB2D630022B8EF /* SecureStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecureStore.h; sourceTree = "<group>"; };
 		C3FB31DF25AB2D630022B8EF /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
-		C3FB31E225AB2D630022B8EF /* LogInSignUpInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInSignUpInput.swift; sourceTree = "<group>"; };
+		C3FB31E225AB2D630022B8EF /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		C3FB31E325AB2D630022B8EF /* RefreshTokenInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshTokenInput.swift; sourceTree = "<group>"; };
 		C3FB31E425AB2D630022B8EF /* ServerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
 		C3FB31E525AB2D630022B8EF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C3FB31E625AB2D630022B8EF /* UserSuccessInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSuccessInput.swift; sourceTree = "<group>"; };
 		C3FB31E825AB2D630022B8EF /* SignedDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignedDataTask.swift; sourceTree = "<group>"; };
-		C3FB31EA25AB2D630022B8EF /* LoginOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOutput.swift; sourceTree = "<group>"; };
-		C3FB31EB25AB2D630022B8EF /* RefreshTokenOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshTokenOutput.swift; sourceTree = "<group>"; };
-		C3FB31EC25AB2D630022B8EF /* NewUserOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserOutput.swift; sourceTree = "<group>"; };
+		C3FB31EA25AB2D630022B8EF /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		C3FB31EB25AB2D630022B8EF /* RefreshTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshTokenRequest.swift; sourceTree = "<group>"; };
+		C3FB31EC25AB2D630022B8EF /* UserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
 		C3FB31EE25AB2D630022B8EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3FB31F025AB2D630022B8EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3FB31F225AB2D630022B8EF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
@@ -292,23 +290,22 @@
 		C3FB31E025AB2D630022B8EF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C3FB31E125AB2D630022B8EF /* Input */,
+				C3FB31E125AB2D630022B8EF /* Responses */,
 				C3FB31E725AB2D630022B8EF /* Networking */,
-				C3FB31E925AB2D630022B8EF /* Output */,
+				C3FB31E925AB2D630022B8EF /* Requests */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		C3FB31E125AB2D630022B8EF /* Input */ = {
+		C3FB31E125AB2D630022B8EF /* Responses */ = {
 			isa = PBXGroup;
 			children = (
-				C3FB31E225AB2D630022B8EF /* LogInSignUpInput.swift */,
+				C3FB31E225AB2D630022B8EF /* LoginResponse.swift */,
 				C3FB31E325AB2D630022B8EF /* RefreshTokenInput.swift */,
 				C3FB31E425AB2D630022B8EF /* ServerError.swift */,
 				C3FB31E525AB2D630022B8EF /* User.swift */,
-				C3FB31E625AB2D630022B8EF /* UserSuccessInput.swift */,
 			);
-			path = Input;
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		C3FB31E725AB2D630022B8EF /* Networking */ = {
@@ -319,14 +316,14 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		C3FB31E925AB2D630022B8EF /* Output */ = {
+		C3FB31E925AB2D630022B8EF /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				C3FB31EA25AB2D630022B8EF /* LoginOutput.swift */,
-				C3FB31EB25AB2D630022B8EF /* RefreshTokenOutput.swift */,
-				C3FB31EC25AB2D630022B8EF /* NewUserOutput.swift */,
+				C3FB31EA25AB2D630022B8EF /* LoginRequest.swift */,
+				C3FB31EB25AB2D630022B8EF /* RefreshTokenRequest.swift */,
+				C3FB31EC25AB2D630022B8EF /* UserRequest.swift */,
 			);
-			path = Output;
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		C3FB31F125AB2D630022B8EF /* Extensions */ = {
@@ -644,14 +641,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3FB321A25AB2D630022B8EF /* RefreshTokenOutput.swift in Sources */,
+				C3FB321A25AB2D630022B8EF /* RefreshTokenRequest.swift in Sources */,
 				C3FB320E25AB2D630022B8EF /* SecureStore.swift in Sources */,
 				C3FB322D25AB2D630022B8EF /* SceneDelegate.swift in Sources */,
 				C3FB320625AB2D630022B8EF /* Settings.swift in Sources */,
 				C3FB320B25AB2D630022B8EF /* AuthManager.swift in Sources */,
 				C3FB322925AB2D630022B8EF /* AppDelegate.swift in Sources */,
 				C3FB321225AB2D630022B8EF /* Device.swift in Sources */,
-				C3FB321725AB2D630022B8EF /* UserSuccessInput.swift in Sources */,
 				C3FB322725AB2D630022B8EF /* ConsoleViewController.swift in Sources */,
 				C3FB321F25AB2D630022B8EF /* SignUpViewController.swift in Sources */,
 				C3FB321E25AB2D630022B8EF /* UIViewController+Extensions.swift in Sources */,
@@ -661,12 +657,12 @@
 				C3FB322625AB2D630022B8EF /* LoadingViewController.swift in Sources */,
 				C3FB321525AB2D630022B8EF /* ServerError.swift in Sources */,
 				C3FB321125AB2D630022B8EF /* SecureStoreQueryable.swift in Sources */,
-				C3FB321B25AB2D630022B8EF /* NewUserOutput.swift in Sources */,
+				C3FB321B25AB2D630022B8EF /* UserRequest.swift in Sources */,
 				C3FB320725AB2D630022B8EF /* Colors.swift in Sources */,
 				C3FB320D25AB2D630022B8EF /* SecureStoreError.swift in Sources */,
-				C3FB321325AB2D630022B8EF /* LogInSignUpInput.swift in Sources */,
+				C3FB321325AB2D630022B8EF /* LoginResponse.swift in Sources */,
 				C3FB322C25AB2D630022B8EF /* RootViewController.swift in Sources */,
-				C3FB321925AB2D630022B8EF /* LoginOutput.swift in Sources */,
+				C3FB321925AB2D630022B8EF /* LoginRequest.swift in Sources */,
 				C3FB321025AB2D630022B8EF /* InternetAuthenticationType.swift in Sources */,
 				C3FB320925AB2D630022B8EF /* UserManager.swift in Sources */,
 				C3FB320A25AB2D630022B8EF /* Core.swift in Sources */,

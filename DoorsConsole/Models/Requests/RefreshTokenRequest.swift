@@ -1,5 +1,5 @@
 //
-//  Login.swift
+//  RefreshToken.swift
 //  DoorsConsole
 //
 //  Created by Igor Leonovich on 5/12/20.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-struct LoginOutput: Codable {
-    let email: String
-    let password: String
+struct RefreshTokenRequest: Codable {
+    let refreshToken: String
 }
