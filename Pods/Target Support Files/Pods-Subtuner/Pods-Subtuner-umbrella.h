@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_SubtunerVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_SubtunerVersionString[];
+FOUNDATION_EXPORT double Pods_DoorsConsoleVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_DoorsConsoleVersionString[];
 

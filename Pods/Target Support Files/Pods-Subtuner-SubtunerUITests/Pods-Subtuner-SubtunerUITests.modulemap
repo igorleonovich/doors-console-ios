@@ -1,5 +1,5 @@
-framework module Pods_Subtuner_SubtunerUITests {
-  umbrella header "Pods-Subtuner-SubtunerUITests-umbrella.h"
+framework module Pods_DoorsConsole_DoorsConsoleUITests {
+  umbrella header "Pods-DoorsConsole-DoorsConsoleUITests-umbrella.h"
 
   export *
   module * { export * }
