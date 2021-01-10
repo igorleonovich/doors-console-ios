@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37B0498A4010035A416CA5F3 /* Pods_Subtuner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39ACEF413DD92021F1709D8 /* Pods_Subtuner.framework */; };
-		9011F301752610A4F75315B2 /* Pods_Subtuner_SubtunerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F32CC25CD5FC16C217BF8AB /* Pods_Subtuner_SubtunerUITests.framework */; };
-		94B40EAFBB4FB03062AD9960 /* Pods_SubtunerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5410EF96AC7ED117FC721A1 /* Pods_SubtunerTests.framework */; };
+		1333D95EC5C812F6E15B40BA /* Pods_DoorsConsoleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E112492C590180F69AD64FD /* Pods_DoorsConsoleTests.framework */; };
+		9CAC8BAFFC6B865A68AA09FB /* Pods_DoorsConsole_DoorsConsoleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D089CEEDFCC55E81B0F3D412 /* Pods_DoorsConsole_DoorsConsoleUITests.framework */; };
 		C3FB320625AB2D630022B8EF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31CE25AB2D630022B8EF /* Settings.swift */; };
 		C3FB320725AB2D630022B8EF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31D025AB2D630022B8EF /* Colors.swift */; };
 		C3FB320825AB2D630022B8EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB31D225AB2D630022B8EF /* Constants.swift */; };
@@ -55,6 +54,7 @@
 		C3FB323A25AB2D6E0022B8EF /* DoorsConsoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB323725AB2D6E0022B8EF /* DoorsConsoleTests.swift */; };
 		C3FB324425AB2D7D0022B8EF /* DoorsConsoleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB324225AB2D7D0022B8EF /* DoorsConsoleUITests.swift */; };
 		C3FB324525AB2D7D0022B8EF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3FB324325AB2D7D0022B8EF /* Info.plist */; };
+		EADDA17B2188EDD242E51CB5 /* Pods_DoorsConsole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A90783D777C8B96230965 /* Pods_DoorsConsole.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,15 +76,20 @@
 
 /* Begin PBXFileReference section */
 		0C684045642D5590459BA22F /* Pods-Subtuner-SubtunerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtuner-SubtunerUITests.release.xcconfig"; path = "Target Support Files/Pods-Subtuner-SubtunerUITests/Pods-Subtuner-SubtunerUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4F32CC25CD5FC16C217BF8AB /* Pods_Subtuner_SubtunerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subtuner_SubtunerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		302CFF8FC84AF108288DAEF2 /* Pods-DoorsConsole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorsConsole.release.xcconfig"; path = "Target Support Files/Pods-DoorsConsole/Pods-DoorsConsole.release.xcconfig"; sourceTree = "<group>"; };
+		449A90783D777C8B96230965 /* Pods_DoorsConsole.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoorsConsole.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63AFE602F2C55B9EB7CDB1CF /* Pods-SubtunerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubtunerTests.release.xcconfig"; path = "Target Support Files/Pods-SubtunerTests/Pods-SubtunerTests.release.xcconfig"; sourceTree = "<group>"; };
+		77E3884C6AAE27DB2FB45E82 /* Pods-DoorsConsoleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorsConsoleTests.release.xcconfig"; path = "Target Support Files/Pods-DoorsConsoleTests/Pods-DoorsConsoleTests.release.xcconfig"; sourceTree = "<group>"; };
+		887349DA34B3BA1F53B4263C /* Pods-DoorsConsole.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorsConsole.debug.xcconfig"; path = "Target Support Files/Pods-DoorsConsole/Pods-DoorsConsole.debug.xcconfig"; sourceTree = "<group>"; };
 		8C83F4ED6C5966CDD925730D /* Pods-Subtuner-SubtunerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtuner-SubtunerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Subtuner-SubtunerUITests/Pods-Subtuner-SubtunerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8DBF6BF431811BDC1EC7B91D /* Pods-Subtuner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtuner.debug.xcconfig"; path = "Target Support Files/Pods-Subtuner/Pods-Subtuner.debug.xcconfig"; sourceTree = "<group>"; };
-		B5410EF96AC7ED117FC721A1 /* Pods_SubtunerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SubtunerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E112492C590180F69AD64FD /* Pods_DoorsConsoleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoorsConsoleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A607C25A9CB45741E94F6AE9 /* Pods-DoorsConsoleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorsConsoleTests.debug.xcconfig"; path = "Target Support Files/Pods-DoorsConsoleTests/Pods-DoorsConsoleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B648C3F60EE1C42EA7AF91E6 /* Pods-SubtunerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubtunerTests.debug.xcconfig"; path = "Target Support Files/Pods-SubtunerTests/Pods-SubtunerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C38FB45F24612F43000C187C /* DoorsConsole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorsConsole.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38FB47524612F47000C187C /* DoorsConsoleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoorsConsoleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38FB48024612F47000C187C /* DoorsConsoleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoorsConsoleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3A84AF40FA4C87A1E23273F /* Pods-DoorsConsole-DoorsConsoleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorsConsole-DoorsConsoleUITests.release.xcconfig"; path = "Target Support Files/Pods-DoorsConsole-DoorsConsoleUITests/Pods-DoorsConsole-DoorsConsoleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C3FB31CE25AB2D630022B8EF /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C3FB31D025AB2D630022B8EF /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C3FB31D225AB2D630022B8EF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -131,8 +136,9 @@
 		C3FB323725AB2D6E0022B8EF /* DoorsConsoleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorsConsoleTests.swift; sourceTree = "<group>"; };
 		C3FB324225AB2D7D0022B8EF /* DoorsConsoleUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorsConsoleUITests.swift; sourceTree = "<group>"; };
 		C3FB324325AB2D7D0022B8EF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D39ACEF413DD92021F1709D8 /* Pods_Subtuner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subtuner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D089CEEDFCC55E81B0F3D412 /* Pods_DoorsConsole_DoorsConsoleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoorsConsole_DoorsConsoleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E356F42CB3B08A8F19E298B3 /* Pods-Subtuner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtuner.release.xcconfig"; path = "Target Support Files/Pods-Subtuner/Pods-Subtuner.release.xcconfig"; sourceTree = "<group>"; };
+		E800BE3B50830D0AD3056C9D /* Pods-DoorsConsole-DoorsConsoleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorsConsole-DoorsConsoleUITests.debug.xcconfig"; path = "Target Support Files/Pods-DoorsConsole-DoorsConsoleUITests/Pods-DoorsConsole-DoorsConsoleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37B0498A4010035A416CA5F3 /* Pods_Subtuner.framework in Frameworks */,
+				EADDA17B2188EDD242E51CB5 /* Pods_DoorsConsole.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94B40EAFBB4FB03062AD9960 /* Pods_SubtunerTests.framework in Frameworks */,
+				1333D95EC5C812F6E15B40BA /* Pods_DoorsConsoleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9011F301752610A4F75315B2 /* Pods_Subtuner_SubtunerUITests.framework in Frameworks */,
+				9CAC8BAFFC6B865A68AA09FB /* Pods_DoorsConsole_DoorsConsoleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +178,12 @@
 				0C684045642D5590459BA22F /* Pods-Subtuner-SubtunerUITests.release.xcconfig */,
 				B648C3F60EE1C42EA7AF91E6 /* Pods-SubtunerTests.debug.xcconfig */,
 				63AFE602F2C55B9EB7CDB1CF /* Pods-SubtunerTests.release.xcconfig */,
+				887349DA34B3BA1F53B4263C /* Pods-DoorsConsole.debug.xcconfig */,
+				302CFF8FC84AF108288DAEF2 /* Pods-DoorsConsole.release.xcconfig */,
+				E800BE3B50830D0AD3056C9D /* Pods-DoorsConsole-DoorsConsoleUITests.debug.xcconfig */,
+				C3A84AF40FA4C87A1E23273F /* Pods-DoorsConsole-DoorsConsoleUITests.release.xcconfig */,
+				A607C25A9CB45741E94F6AE9 /* Pods-DoorsConsoleTests.debug.xcconfig */,
+				77E3884C6AAE27DB2FB45E82 /* Pods-DoorsConsoleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -179,9 +191,9 @@
 		9C3A9102AF8C23F277C6DD3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D39ACEF413DD92021F1709D8 /* Pods_Subtuner.framework */,
-				4F32CC25CD5FC16C217BF8AB /* Pods_Subtuner_SubtunerUITests.framework */,
-				B5410EF96AC7ED117FC721A1 /* Pods_SubtunerTests.framework */,
+				449A90783D777C8B96230965 /* Pods_DoorsConsole.framework */,
+				D089CEEDFCC55E81B0F3D412 /* Pods_DoorsConsole_DoorsConsoleUITests.framework */,
+				9E112492C590180F69AD64FD /* Pods_DoorsConsoleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -542,7 +554,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Subtuner-SubtunerUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DoorsConsole-DoorsConsoleUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -564,7 +576,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SubtunerTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DoorsConsoleTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -577,15 +589,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Subtuner/Pods-Subtuner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-DoorsConsole/Pods-DoorsConsole-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Subtuner/Pods-Subtuner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-DoorsConsole/Pods-DoorsConsole-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Subtuner/Pods-Subtuner-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoorsConsole/Pods-DoorsConsole-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9853BDC83AE5F031110F2C07 /* [CP] Check Pods Manifest.lock */ = {
@@ -603,7 +615,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Subtuner-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DoorsConsole-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -616,15 +628,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Subtuner-SubtunerUITests/Pods-Subtuner-SubtunerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-DoorsConsole-DoorsConsoleUITests/Pods-DoorsConsole-DoorsConsoleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Subtuner-SubtunerUITests/Pods-Subtuner-SubtunerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-DoorsConsole-DoorsConsoleUITests/Pods-DoorsConsole-DoorsConsoleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Subtuner-SubtunerUITests/Pods-Subtuner-SubtunerUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoorsConsole-DoorsConsoleUITests/Pods-DoorsConsole-DoorsConsoleUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -836,7 +848,7 @@
 		};
 		C38FB48A24612F47000C187C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DBF6BF431811BDC1EC7B91D /* Pods-Subtuner.debug.xcconfig */;
+			baseConfigurationReference = 887349DA34B3BA1F53B4263C /* Pods-DoorsConsole.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = DoorsConsole;
 				CODE_SIGN_STYLE = Automatic;
@@ -854,7 +866,7 @@
 		};
 		C38FB48B24612F47000C187C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E356F42CB3B08A8F19E298B3 /* Pods-Subtuner.release.xcconfig */;
+			baseConfigurationReference = 302CFF8FC84AF108288DAEF2 /* Pods-DoorsConsole.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = DoorsConsole;
 				CODE_SIGN_STYLE = Automatic;
@@ -872,9 +884,8 @@
 		};
 		C38FB48D24612F47000C187C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B648C3F60EE1C42EA7AF91E6 /* Pods-SubtunerTests.debug.xcconfig */;
+			baseConfigurationReference = A607C25A9CB45741E94F6AE9 /* Pods-DoorsConsoleTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SubtunerTests/Info.plist;
@@ -894,9 +905,8 @@
 		};
 		C38FB48E24612F47000C187C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63AFE602F2C55B9EB7CDB1CF /* Pods-SubtunerTests.release.xcconfig */;
+			baseConfigurationReference = 77E3884C6AAE27DB2FB45E82 /* Pods-DoorsConsoleTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SubtunerTests/Info.plist;
@@ -916,9 +926,8 @@
 		};
 		C38FB49024612F47000C187C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C83F4ED6C5966CDD925730D /* Pods-Subtuner-SubtunerUITests.debug.xcconfig */;
+			baseConfigurationReference = E800BE3B50830D0AD3056C9D /* Pods-DoorsConsole-DoorsConsoleUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SubtunerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -936,9 +945,8 @@
 		};
 		C38FB49124612F47000C187C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C684045642D5590459BA22F /* Pods-Subtuner-SubtunerUITests.release.xcconfig */;
+			baseConfigurationReference = C3A84AF40FA4C87A1E23273F /* Pods-DoorsConsole-DoorsConsoleUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SubtunerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
