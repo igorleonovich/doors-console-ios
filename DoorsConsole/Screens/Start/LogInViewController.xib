@@ -30,7 +30,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="frE-au-ifK">
-                                    <rect key="frame" x="87" y="75" width="240" height="350.5"/>
+                                    <rect key="frame" x="87" y="71" width="240" height="358.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C O N S O L E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYo-MM-H6t">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="26.5"/>
@@ -49,9 +49,10 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCr-Zn-Ie9">
-                                            <rect key="frame" x="0.0" y="190.5" width="240" height="32"/>
+                                            <rect key="frame" x="0.0" y="190.5" width="240" height="40"/>
                                             <color key="backgroundColor" systemColor="labelColor"/>
                                             <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
+                                            <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                             <state key="normal" title="Log In">
                                                 <color key="titleColor" systemColor="systemBackgroundColor"/>
                                             </state>
@@ -66,7 +67,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsf-u3-lWa">
-                                            <rect key="frame" x="0.0" y="254.5" width="240" height="32"/>
+                                            <rect key="frame" x="0.0" y="262.5" width="240" height="32"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                             <state key="normal" title="Sign Up">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -82,7 +83,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2P-xC-B9k" userLabel="Forgot Password">
-                                            <rect key="frame" x="0.0" y="318.5" width="240" height="32"/>
+                                            <rect key="frame" x="0.0" y="326.5" width="240" height="32"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                             <state key="normal" title="Forgot Password">
                                                 <color key="titleColor" systemColor="labelColor"/>
