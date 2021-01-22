@@ -346,12 +346,12 @@
 		C3FB31F425AB2D630022B8EF /* Start */ = {
 			isa = PBXGroup;
 			children = (
-				C3FB31F525AB2D630022B8EF /* SignUpViewController.swift */,
 				C3FB31F625AB2D630022B8EF /* LoadingViewController.xib */,
 				C3FB31F725AB2D630022B8EF /* ForgotPasswordViewController.swift */,
 				C3FB31F825AB2D630022B8EF /* LogInViewController.xib */,
 				C3FB31F925AB2D630022B8EF /* LogInViewController.swift */,
 				C3FB31FA25AB2D630022B8EF /* SignUpViewController.xib */,
+				C3FB31F525AB2D630022B8EF /* SignUpViewController.swift */,
 				C3FB31FB25AB2D630022B8EF /* ForgotPasswordViewController.xib */,
 				C3FB31FC25AB2D630022B8EF /* LoadingViewController.swift */,
 			);
