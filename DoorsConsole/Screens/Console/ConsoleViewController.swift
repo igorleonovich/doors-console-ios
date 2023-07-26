@@ -9,9 +9,9 @@
 import UIKit
 import MBProgressHUD
 
-class ConsoleViewController: BaseViewController {
+final class ConsoleViewController: BaseViewController {
     
-    let core: Core
+    weak var core: Core!
     
     var checkDataTask: URLSessionTask?
     

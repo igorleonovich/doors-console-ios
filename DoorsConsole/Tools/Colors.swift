@@ -11,6 +11,7 @@ import UIKit
 import UIKit
 
 extension UIColor {
+    
     static var customAccent: UIColor {
         if #available(iOS 13, *) {
             return UIColor { (traitCollection: UITraitCollection) -> UIColor in

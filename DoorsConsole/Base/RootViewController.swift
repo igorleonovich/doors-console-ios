@@ -8,11 +8,11 @@
 
 import UIKit
 
-class RootViewController: BaseViewController {
+final class RootViewController: BaseViewController {
     
-    let centerView = UIView()
+    var centerView = UIView()
     
-    let core: Core
+    weak var core: Core!
     
     var loadingViewController: UIViewController?
     var authNavigationController: UINavigationController?

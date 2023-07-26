@@ -8,9 +8,9 @@
 
 import Foundation
 
-class UserManager {
+final class UserManager {
     
-    var core: Core!
+    weak var core: Core!
     
     private lazy var userFileURL: URL? = {
         guard let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }

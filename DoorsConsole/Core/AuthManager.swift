@@ -8,9 +8,9 @@
 
 import Foundation
 
-class AuthManager {
+final class AuthManager {
     
-    var core: Core!
+    weak var core: Core!
     var secureStoreWithGenericPwd: SecureStore!
     
     lazy var sessionConfiguration: URLSessionConfiguration = {
