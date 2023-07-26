@@ -6,8 +6,8 @@
 //  Copyright © 2020 IELIS. All rights reserved.
 //
 
+import ProgressHUD
 import UIKit
-import MBProgressHUD
 
 final class LogInViewController: BaseViewController {
     
@@ -41,13 +41,13 @@ final class LogInViewController: BaseViewController {
     }
     
     @IBAction func logInButtonTapped(_ sender: Any) {
-        MBProgressHUD.showAdded(to: view, animated: true)
+        ProgressHUD.show()
         guard let email = emailTextField.text,
             let password = passwordTextField.text else { return }
         let login = LoginRequest(email: email, password: password)
         core.authManager.logIn(login: login) { [weak self] error in
             guard let `self` = self else { return }
-            MBProgressHUD.hide(for: self.view, animated: true)
+            ProgressHUD.dismiss()
             if let error = error {
                 let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)

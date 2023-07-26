@@ -6,8 +6,8 @@
 //  Copyright © 2020 IELIS. All rights reserved.
 //
 
+import ProgressHUD
 import UIKit
-import MBProgressHUD
 
 final class ConsoleViewController: BaseViewController {
     
@@ -72,7 +72,7 @@ final class ConsoleViewController: BaseViewController {
     @IBAction func menuButtonTapped(_ sender: Any) {
         let optionMenu = UIAlertController(title: nil, message: "Menu", preferredStyle: .actionSheet)
         let logOutAction = UIAlertAction(title: "Log Out", style: .destructive, handler: { action in
-            MBProgressHUD.showAdded(to: self.view, animated: true)
+            ProgressHUD.show()
             self.core.authManager.logOut { [weak self] error in
                 guard let `self` = self else { return }
                 if let error = error {
@@ -85,7 +85,7 @@ final class ConsoleViewController: BaseViewController {
                     rootViewController.removeConsoleNavigationController()
                     rootViewController.showAuthNavigationController()
                 }
-                MBProgressHUD.hide(for: self.view, animated: true)
+                ProgressHUD.dismiss()
             }
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)

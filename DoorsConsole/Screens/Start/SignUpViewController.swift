@@ -6,8 +6,8 @@
 //  Copyright © 2020 IELIS. All rights reserved.
 //
 
+import ProgressHUD
 import UIKit
-import MBProgressHUD
 
 final class SignUpViewController: BaseViewController {
     
@@ -42,7 +42,7 @@ final class SignUpViewController: BaseViewController {
     }
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
-        MBProgressHUD.showAdded(to: view, animated: true)
+        ProgressHUD.show()
         guard let username = usernameTextField.text,
             let email = emailTextField.text,
             let password = passwordTextField.text else {
@@ -51,7 +51,7 @@ final class SignUpViewController: BaseViewController {
         let newUser = UserRequest(username: username, email: email, password: password, confirmPassword: password)
         core.authManager.signUp(newUser: newUser) { [weak self] error in
             guard let `self` = self else { return }
-            MBProgressHUD.hide(for: self.view, animated: true)
+            ProgressHUD.dismiss()
             if let error = error {
                 let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)

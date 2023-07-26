@@ -10,7 +10,7 @@ import UIKit
 
 final class RootViewController: BaseViewController {
     
-    var centerView = UIView()
+    let centerView = UIView()
     
     weak var core: Core!
     

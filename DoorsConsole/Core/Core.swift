@@ -10,8 +10,8 @@ import Foundation
 
 class Core {
     
-    var authManager = AuthManager()
-    var userManager = UserManager()
+    let authManager = AuthManager()
+    let userManager = UserManager()
     
     lazy var signedSessionConfiguration: URLSessionConfiguration = {
         let config = URLSessionConfiguration.default
