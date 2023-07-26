@@ -1,150 +1,114 @@
-# JWTDecode.swift
+![JWTDecode.swift](https://cdn.auth0.com/website/sdks/banners/jwtdecode-swift-banner.png)
 
-[![CircleCI](https://img.shields.io/circleci/build/github/auth0/JWTDecode.swift?style=flat-square)](https://circleci.com/gh/auth0/JWTDecode.swift)
-[![Coverage Status](https://img.shields.io/codecov/c/github/auth0/JWTDecode.swift/master.svg?style=flat-square)](https://codecov.io/github/auth0/JWTDecode.swift)
-[![Version](https://img.shields.io/cocoapods/v/JWTDecode.svg?style=flat-square)](https://cocoadocs.org/docsets/JWTDecode)
-[![License](https://img.shields.io/cocoapods/l/JWTDecode.svg?style=flat-square)](https://cocoadocs.org/docsets/JWTDecode)
-[![Platform](https://img.shields.io/cocoapods/p/JWTDecode.svg?style=flat-square)](https://cocoadocs.org/docsets/JWTDecode)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage)
-![Swift 5.3](https://img.shields.io/badge/Swift-5.3-orange.svg?style=flat-square)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fauth0%2FJWTDecode.swift.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fauth0%2FJWTDecode.swift?ref=badge_shield)
+![Version](https://img.shields.io/cocoapods/v/JWTDecode.svg?style=flat)
+[![CircleCI](https://img.shields.io/circleci/build/github/auth0/JWTDecode.swift?style=flat)](https://circleci.com/gh/auth0/JWTDecode.swift/tree/master)
+[![Coverage Status](https://img.shields.io/codecov/c/github/auth0/JWTDecode.swift/master.svg?style=flat)](https://codecov.io/github/auth0/JWTDecode.swift)
+![License](https://img.shields.io/github/license/auth0/JWTDecode.swift.svg?style=flat)
 
-This library will help you check [JWT](https://jwt.io/) payload
+📚 [**Documentation**](#documentation) • 🚀 [**Getting Started**](#getting-started) • 📃 [**Support Policy**](#support-policy) • 💬 [**Feedback**](#feedback)
 
-> This library doesn't validate the token, any well formed JWT can be decoded from Base64Url.
+**This library doesn't validate the JWT. Any well-formed JWT can be decoded from Base64URL.**
 
-## Table of Contents
+Migrating from v2? Check the [Migration Guide](V3_MIGRATION_GUIDE.md).
 
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [What is Auth0?](#what-is-auth0)
-- [Create a Free Auth0 Account](#create-a-free-auth0-account)
-- [Issue Reporting](#issue-reporting)
-- [Author](#author)
-- [License](#license)
+## Documentation
 
-## Requirements
+- [**API Documentation**](https://auth0.github.io/JWTDecode.swift/documentation/jwtdecode) - documentation auto-generated from the code comments that explains all the available features.
+  + [JWT](https://auth0.github.io/JWTDecode.swift/documentation/jwtdecode/jwt)
+  + [Claim](https://auth0.github.io/JWTDecode.swift/documentation/jwtdecode/claim)
+  + [JWTDecodeError](https://auth0.github.io/JWTDecode.swift/documentation/jwtdecode/jwtdecodeerror)
+- [**Auth0 Documentation**](https://auth0.com/docs) - explore our docs site and learn more about Auth0.
 
-- iOS 9+ / macOS 10.11+ / tvOS 9.0+ / watchOS 2.0+
-- Xcode 11.4+ / 12.x
-- Swift 4.x/5.x
+> **Note**
+> Check the [Support Policy](#support-policy) to learn when dropping Xcode, Swift, and platform versions will not be considered a **breaking change**.
 
-## Installation
+## Getting Started
+
+### Requirements
+
+- iOS 12.0+ / macOS 10.15+ / tvOS 12.0+ / watchOS 6.2+
+- Xcode 13.x / 14.x
+- Swift 5.5+
+
+### Installation
+
+#### Swift Package Manager
+
+Open the following menu item in Xcode:
+
+**File > Add Packages...**
+
+In the **Search or Enter Package URL** search box enter this URL: 
+
+```text
+https://github.com/auth0/JWTDecode.swift
+```
+
+Then, select the dependency rule and press **Add Package**.
 
 #### Cocoapods
 
-If you are using [Cocoapods](https://cocoapods.org), add this line to your `Podfile`:
+Add the following line to your `Podfile`:
 
 ```ruby
-pod 'JWTDecode', '~> 2.4'
+pod 'JWTDecode', '~> 3.1'
 ```
 
-Then run `pod install`.
-
-> For more information on Cocoapods, check [their official documentation](https://guides.cocoapods.org/using/getting-started.html).
+Then, run `pod install`.
 
 #### Carthage
 
-If you are using [Carthage](https://github.com/Carthage/Carthage), add the following line to your `Cartfile`:
+Add the following line to your `Cartfile`:
 
-```ruby
-github "auth0/JWTDecode.swift" ~> 2.4
+```text
+github "auth0/JWTDecode.swift" ~> 3.1
 ```
 
-Then run `carthage bootstrap`.
+Then, run `carthage bootstrap --use-xcframeworks`.
 
-> For more information about Carthage usage, check [their official documentation](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos).
+### Usage
 
-#### SPM (Xcode 11.2+)
+**See all the available features in the [API documentation ↗](https://auth0.github.io/JWTDecode.swift/documentation/jwtdecode)**
 
-If you are using the Swift Package Manager, open the following menu item in Xcode:
-
-**File > Swift Packages > Add Package Dependency...**
-
-In the **Choose Package Repository** prompt add this url: 
-
-```
-https://github.com/auth0/JWTDecode.swift.git
-```
-
-Then press **Next** and complete the remaining steps.
-
-> For further reference on SPM, check [its official documentation](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app).
-
-## Usage
-
-Import the framework
+1. Import the framework
 
 ```swift
 import JWTDecode
 ```
 
-Decode the token
+2. Decode the token
 
 ```swift
 let jwt = try decode(jwt: token)    
 ```
 
-### JWT Parts
+#### JWT parts
 
-#### Header dictionary
+| Part               | Property        |
+|:-------------------|:----------------|
+| Header dictionary  | `jwt.header`    |
+| Claims in JWT body | `jwt.body`      |
+| JWT signature      | `jwt.signature` |
 
-```swift
-jwt.header
-```
+#### Registered claims
 
-#### Claims in token body
+| Claim                   | Property         |
+|:------------------------|:-----------------|
+| **aud** Audience        | `jwt.audience`   |
+| **sub** Subject         | `jwt.subject`    |
+| **jti** JWT ID          | `jwt.identifier` |
+| **iss** Issuer          | `jwt.issuer`     |
+| **nbf** Not Before      | `jwt.notBefore`  |
+| **iat** Issued At       | `jwt.issuedAt`   |
+| **exp** Expiration Time | `jwt.expiresAt`  |
 
-```swift
-jwt.body
-```
+#### Custom claims
 
-#### Token signature
-
-```swift
-jwt.signature
-```
-
-### Registered Claims
-
-* "aud" (Audience)
-```swift
-jwt.audience
-```
-* "sub" (Subject)
-```swift
-jwt.subject
-```
-* "jti" (JWT ID)
-```swift
-jwt.identifier
-```
-* "iss" (Issuer)
-```swift
-jwt.issuer
-```
-* "nbf" (Not Before)
-```swift
-jwt.notBefore
-```
-* "iat" (Issued At)
-```swift
-jwt.issuedAt
-```
-* "exp" (Expiration Time)
-```swift
-jwt.expiresAt
-```
-
-### Custom Claims
-
-If we also have our custom claims we can retrive them calling `claim(name: String) -> Claim` then you can try converting the value like:
+You can retrieve a custom claim through a subscript and then attempt to convert the value to a specific type.
 
 ```swift
-let claim = jwt.claim(name: "email")
-if let email = claim.string {
-    print("Email in jwt was \(email)")
+if let email = jwt["email"].string {
+    print("Email is \(email)")
 }
 ```
 
@@ -152,59 +116,87 @@ The supported conversions are:
 
 ```swift
 var string: String?
+var boolean: Bool?
 var integer: Int?
 var double: Double?
-var date: NSDate?
+var date: Date?
 var array: [String]?
 ```
 
-You can easily add a convenience accessor for a custom claim by adding an extension:
+You can easily add a convenience accessor for a custom claim in an extension.
 
 ```swift
 extension JWT {
     var myClaim: String? {
-        return claim(name: "my_claim").string
+        return self["my_claim"].string
     }
 }
 ```
 
-### Error Handling
+#### Error handling
 
-If the token is invalid an `NSError` will be thrown from the `decode(token)` function:
+If the JWT is malformed the `decode(jwt:)` function will throw a `JWTDecodeError`.
 
 ```swift
-catch let error as NSError {
-    error.localizedDescription
+catch let error as JWTDecodeError {
+    print(error)
 }
 ```
 
-## What is Auth0?
+## Support Policy
 
-Auth0 helps you to:
+This Policy defines the extent of the support for Xcode, Swift, and platform (iOS, macOS, tvOS, and watchOS) versions in JWTDecode.swift.
 
-* Add authentication with [multiple sources](https://auth0.com/docs/identityproviders), either social identity providers such as **Google, Facebook, Microsoft Account, LinkedIn, GitHub, Twitter, Box, Salesforce** (amongst others), or enterprise identity systems like **Windows Azure AD, Google Apps, Active Directory, ADFS, or any SAML Identity Provider**.
-* Add authentication through more traditional **[username/password databases](https://auth0.com/docs/connections/database/custom-db)**.
-* Add support for **[linking different user accounts](https://auth0.com/docs/link-accounts)** with the same user.
-* Support for generating signed [JSON Web Tokens](https://auth0.com/docs/tokens/concepts/jwts) to call your APIs and **flow the user identity** securely.
-* Analytics of how, when, and where users are logging in.
-* Pull data from other sources and add it to the user profile through [JavaScript rules](https://auth0.com/docs/rules).
+### Xcode
 
-## Create a Free Auth0 Account
+The only supported versions of Xcode are those that can be currently used to submit apps to the App Store. Once a Xcode version becomes unsupported, dropping it from JWTDecode.swift **will not be considered a breaking change**, and will be done in a **minor** release.
 
-1. Go to [Auth0](https://auth0.com) and click **Sign Up**.
-2. Use Google, GitHub, or Microsoft Account to login.
+### Swift
 
-## Issue Reporting
+The minimum supported Swift minor version is the one released with the oldest-supported Xcode version. Once a Swift minor becomes unsupported, dropping it from JWTDecode.swift **will not be considered a breaking change**, and will be done in a **minor** release.
 
-If you have found a bug or to request a feature, please [raise an issue](https://github.com/auth0/JWTDecode.swift/issues). Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/responsible-disclosure-policy) details the procedure for disclosing security issues.
+### Platforms
 
-## Author
+Only the last 4 major platform versions are supported, starting from:
 
-[Auth0](https://auth0.com)
+- iOS **12**
+- macOS **10.15**
+- macCatalyst **13**
+- tvOS **12**
+- watchOS **6.2**
 
-## License
+Once a platform version becomes unsupported, dropping it from JWTDecode.swift **will not be considered a breaking change**, and will be done in a **minor** release. For example, iOS 13 will cease to be supported when iOS 17 gets released, and JWTDecode.swift will be able to drop it in a minor release.
 
-This project is licensed under the MIT license. See the [LICENSE](LICENSE.txt) file for more info.
+In the case of macOS, the yearly named releases are considered a major platform version for the purposes of this Policy, regardless of the actual version numbers.
 
+## Feedback
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fauth0%2FJWTDecode.swift.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fauth0%2FJWTDecode.swift?ref=badge_large)
+### Contributing
+
+We appreciate feedback and contribution to this repo! Before you get started, please see the following:
+
+- [Auth0's general contribution guidelines](https://github.com/auth0/open-source-template/blob/master/GENERAL-CONTRIBUTING.md)
+- [Auth0's code of conduct guidelines](https://github.com/auth0/open-source-template/blob/master/CODE-OF-CONDUCT.md)
+- [JWTDecode.swift's contribution guide](CONTRIBUTING.md)
+
+### Raise an issue
+
+To provide feedback or report a bug, please [raise an issue on our issue tracker](https://github.com/auth0/JWTDecode.swift/issues).
+
+### Vulnerability reporting
+
+Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/responsible-disclosure-policy) details the procedure for disclosing security issues.
+
+---
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://cdn.auth0.com/website/sdks/logos/auth0_light_mode.png" width="150">
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.auth0.com/website/sdks/logos/auth0_dark_mode.png" width="150">
+    <img alt="Auth0 Logo" src="https://cdn.auth0.com/website/sdks/logos/auth0_light_mode.png" width="150">
+  </picture>
+</p>
+
+<p align="center">Auth0 is an easy to implement, adaptable authentication and authorization platform. To learn more checkout <a href="https://auth0.com/why-auth0">Why Auth0?</a></p>
+
+<p align="center">This project is licensed under the MIT license. See the <a href="./LICENSE"> LICENSE</a> file for more info.</p>
