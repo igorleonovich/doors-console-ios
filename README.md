@@ -1,3 +1,3 @@
-# DoorsConsole
+# Doors Console (iOS) (Concept)
 
-iOS application with JWT auth (concept)
+An iOS application with JWT auth
